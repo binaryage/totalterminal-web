@@ -13,6 +13,7 @@ meta_title: TotalTerminal is a system-wide terminal accessible via a hot-key
 meta_keywords: totalterminal,terminal,osx,simbl,binaryage,productivity,software,visor
 meta_description: TotalTerminal is a plugin for Terminal.app which provides Quake-style terminal window available on keyboard shortcut
 meta_image: http://www.binaryage.com/shared/img/icons/totalterminal-256.png
+ripsteve: 1
 facebook: 1
 retweet: 1
 buzz: 1
