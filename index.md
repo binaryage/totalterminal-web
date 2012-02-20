@@ -63,18 +63,21 @@ To hide Visor Window, you can either:
 > There are several reasons. First, Visor Window is also a feature of [TotalFinder](http://totalfinder.binaryage.com), my other application plugin. This was causing confusion. Second, TotalFinder and TotalTerminal make up nicer branding. It is immediately obvious they are related and TotalTerminal has something to do with Terminal.app. Also searching for TotalTerminal through social media is easier for me. Visor is a general term.
 
 #### Do I need to uninstall Visor.bundle prior TotalTerminal installation?
-> Not necessary. TotalTerminal installer will remove it automatically. Visor and TotalTerminal conflict so you cannot install them both.
+> Not necessary. TotalTerminal installer will remove it automatically. Visor and TotalTerminal conflict so you cannot have them running both.
 
-#### Does TotalTerminal work on OSX 10.7 (Lion)?
+#### Does TotalTerminal work on OS X 10.8 (Mountain Lion)?
+> Yes, since 1.2.
+
+#### Does TotalTerminal work on OS X 10.7 (Lion)?
 > Yes, since 1.0.
 
-#### Does TotalTerminal work on OSX 10.6 (Snow Leopard)?
+#### Does TotalTerminal work on OS X 10.6 (Snow Leopard)?
 > Yes, since 1.0.
 
-#### Does TotalTerminal work on OSX 10.5 (Leopard)?
+#### Does TotalTerminal work on OS X 10.5 (Leopard)?
 > It should work, but I no longer support Leopard.
 
-#### Does TotalTerminal work on OSX 10.4 (Tiger)?
+#### Does TotalTerminal work on OS X 10.4 (Tiger)?
 > Tiger was supported by early Visor (pre 1.5).
 
 #### How do I uninstall TotalTerminal?
