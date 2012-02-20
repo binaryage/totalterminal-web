@@ -52,26 +52,6 @@ To hide Visor Window, you can either:
   
 <span style="color: #a00">For original Visor 2.2 users: TotalTerminal plugin is not injected into Terminal.app automatically like with SIMBL. You have to launch TotalTerminal.app to inject the plugin into Terminal.app. You might want to put TotalTerminal.app into Startup Items.</span>
 
----
-  
-<span style="color: #a00">Duplicate Dock icons problem.</span>
-
-This affects people who put TotalTerminal.app icon in the Dock as a permanent icon.
-
-Let me explain what happens in detail. When you click TotalTerminal.app icon in the Dock, the system launches TotalTerminal.app. But [TotalTerminal.app is just a lightweight launcher](https://github.com/binaryage/totalterminal-installer/tree/master/TotalTerminal.app) which:
-  
-  1. launches Terminal.app (if it is not running) 
-  2. injects TotalTerminal plugin into it.
-  3. quits
-
-You end up with two Terminal icons in the Dock: one for running Terminal.app and second for pinned TotalTerminal.app (which is not running anymore after injecting the plugin).
-
-You can hide an app from the Dock but not dynamically. You have to tweak its Info.plist and set LSUIElement to true. TotalTerminal will never modify your Terminal.app files so it cannot force running Terminal to hide icon in the Dock. On the other hand it cannot hide its own icon from the Dock, because it is not running and you have pinned it explicitly, which is not affected by LSUIElement set on TotalTerminal.app.
-
-I would recommend you to use some other means of launching TotalTerminal.app for example via Spotlight or some launcher like Alfred.app, or put it into Startup Items. Maybe I will come up with some better solution in the future. Any ideas?
-
-Other option is to `open /Applications/Utilities/Terminal.app/Contents/Info.plist` and add LSUIElement entry and set it to true (in Property List Editor is displays as "Application is agent (UIElement)").
-
 ## FAQ
 
 #### What is the difference between Visor.bundle and TotalTerminal.app?
@@ -79,7 +59,7 @@ Other option is to `open /Applications/Utilities/Terminal.app/Contents/Info.plis
 > 
 > The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)
 
-#### Why have you renamed it?
+#### Why did rename it?
 > There are several reasons. First, Visor Window is also a feature of [TotalFinder](http://totalfinder.binaryage.com), my other application plugin. This was causing confusion. Second, TotalFinder and TotalTerminal make up nicer branding. It is immediately obvious they are related and TotalTerminal has something to do with Terminal.app. Also searching for TotalTerminal through social media is easier for me. Visor is a general term.
 
 #### Do I need to uninstall Visor.bundle prior TotalTerminal installation?
@@ -100,12 +80,27 @@ Other option is to `open /Applications/Utilities/Terminal.app/Contents/Info.plis
 #### How do I uninstall TotalTerminal?
 > You may use Status Menu Icon and select `Uninstall TotalTerminal`. Alternatively you may [download TotalTerminal DMG](#changelog) again and use `TotalTerminal Uninstaller` which is present there.
 
+#### I see two Terminal.app icons in the Dock. How should I get rid of it?
+
+> This affects people who pin TotalTerminal.app icon in the Dock as a permanent icon.
+>
+>When you click TotalTerminal.app icon in the Dock, the system launches TotalTerminal.app. But [TotalTerminal.app is just a lightweight launcher](https://github.com/binaryage/totalterminal-installer/tree/master/TotalTerminal.app) which:
+>  
+>  1. launches Terminal.app (if it is not running) 
+>  2. injects TotalTerminal plugin into it.
+>  3. quits
+>
+>You end up with two Terminal icons in the Dock: one for running Terminal.app and second for pinned TotalTerminal.app (which is not running anymore after injecting the plugin).
+>
+>You can hide an app from the Dock but not dynamically. You have to tweak its Info.plist and set LSUIElement to true. TotalTerminal will never modify your Terminal.app files so it cannot force running Terminal to hide icon in the Dock. On the other hand it cannot hide its own icon from the Dock, because it is not running and you have pinned it explicitly, which is not affected by LSUIElement set on TotalTerminal.app.
+>
+>I would recommend you to use some other means of launching TotalTerminal.app for example via Spotlight or some launcher like Alfred.app, or put it into Startup Items. Maybe I will come up with some better solution in the future. Any ideas?
+>
+>Other option is to `open /Applications/Utilities/Terminal.app/Contents/Info.plist` and add LSUIElement entry and set it to true (in Property List Editor is displays as "Application is agent (UIElement)").
+
 #### Where are TotalTerminal settings stored?
 > TotalTerminal settings are stored with Terminal.app settings. You can `open ~/Library/Preferences/com.apple.Terminal.plist` and tweak the values (better to do this when Terminal.app is not running). 
 If you have troubles with TotalTerminal settings, delete this file and restart Terminal.app. The file will be recreated with default values.
-
-#### My TotalTerminal menu-bar icon is dimmed out. My hot-key doesn't work and just beeps. What's wrong?
-> There can be only one Visor Window in the system. If you close this terminal window (for example `Control+D` or typing exit in shell), TotalTerminal gets into the disabled state you are describing. Just open a new terminal window and it gets Visor-ed again. You can do this for example by clicking on Terminal.app icon in the Dock.
 
 #### How can I open a new terminal window the old way, as a classic OSX window?
 > If there is a Visor Window (the status menu icon is active) every new terminal window will be opened as a classic OS X window. In other words, open at least two terminal windows. The second one will be a classic terminal window for sure.
