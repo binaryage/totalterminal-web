@@ -59,7 +59,7 @@ To hide Visor Window, you can either:
 > 
 > The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)
 
-#### Why did rename it?
+#### Why did you rename it?
 > There are several reasons. First, Visor Window is also a feature of [TotalFinder](http://totalfinder.binaryage.com), my other application plugin. This was causing confusion. Second, TotalFinder and TotalTerminal make up nicer branding. It is immediately obvious they are related and TotalTerminal has something to do with Terminal.app. Also searching for TotalTerminal through social media is easier for me. Visor is a general term.
 
 #### Do I need to uninstall Visor.bundle prior TotalTerminal installation?
