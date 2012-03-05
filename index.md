@@ -5,9 +5,9 @@ product: totalterminal
 product_title: TotalTerminal
 product_subtitle: a system-wide terminal available on a hot-key
 note: If you like TotalTerminal, check out also <a href="http://totalfinder.binaryage.com">TotalFinder</a>.
-download: http://downloads.binaryage.com/TotalTerminal-1.1.4.dmg
-downloadtitle: Download v1.1.4
-downloadsubtitle: Requires OS X 10.6 or 10.7
+download: http://downloads.binaryage.com/TotalTerminal-1.2.2.dmg
+downloadtitle: Download v1.2.2
+downloadsubtitle: Requires OS X 10.6 or higher
 repo: http://github.com/binaryage/totalterminal
 meta_title: TotalTerminal is a system-wide terminal accessible via a hot-key
 meta_keywords: totalterminal,terminal,osx,simbl,binaryage,productivity,software,visor
