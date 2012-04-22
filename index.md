@@ -1,5 +1,5 @@
 ---
-layout: product2
+layout: product
 title: TotalTerminal is a system-wide terminal accessible via a hot-key
 product: totalterminal
 product_title: TotalTerminal
