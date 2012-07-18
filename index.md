@@ -5,8 +5,8 @@ product: totalterminal
 product_title: TotalTerminal
 product_subtitle: a system-wide terminal available on a hot-key
 note: If you like TotalTerminal, check out also <a href="http://totalfinder.binaryage.com">TotalFinder</a>.
-download: http://downloads.binaryage.com/TotalTerminal-1.2.3.dmg
-downloadtitle: Download v1.2.3
+download: http://downloads.binaryage.com/TotalTerminal-1.3.dmg
+downloadtitle: Download v1.3
 downloadsubtitle: Requires OS X 10.6 or higher
 repo: http://github.com/binaryage/totalterminal
 meta_title: TotalTerminal is a system-wide terminal accessible via a hot-key
@@ -80,6 +80,9 @@ To hide Visor Window, you can either:
 #### Does TotalTerminal work on OS X 10.4 (Tiger)?
 > Tiger was supported by early Visor (pre 1.5).
 
+#### Where I can get older versions?
+> Prior 1.0, TotalTerminal was known as [Visor](http://visor.binaryage.com). It was brought to you by Alcor ([Blacktree](http://blacktree.com)), kudos man!
+
 #### How do I uninstall TotalTerminal?
 > You may use Status Menu Icon and select `Uninstall TotalTerminal`. Alternatively you may [download TotalTerminal DMG](#changelog) again and use `TotalTerminal Uninstaller` which is present there.
 
@@ -145,15 +148,6 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
         $('.betahint').toggle();
     }
 </script>
-
-## Links
-
-#### Source code
-  * [sources are hosted on GitHub](http://github.com/binaryage/totalterminal)
-
-#### The original TotalTerminal called "Visor" was brought to you by Alcor ([Blacktree](http://blacktree.com)), kudos man!
-
-**[Where can I get older versions?](http://visor.binaryage.com)**
 
 ## Special Guest
 
