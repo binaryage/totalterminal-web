@@ -47,16 +47,16 @@ To hide Visor Window, you can either:
 
   * re-trigger with your key-combo
   * optionally, you can click off the TotalTerminal window
-  
+
 ---
-  
+
 <span style="color: #a00">For original Visor 2.2 users: TotalTerminal plugin is not injected into Terminal.app automatically like with SIMBL. You have to launch TotalTerminal.app to inject the plugin into Terminal.app. You might want to put TotalTerminal.app into Startup Items.</span>
 
 ## FAQ
 
 #### What is the difference between Visor.bundle and TotalTerminal.app?
 > TotalTerminal supersedes Visor. Visor.bundle is a SIMBL plugin which was originally written by Nicholas Jitkoff from [Blacktree](http://blacktree.com). Original Visor was introduced for OS X - Tiger. I have been developing it since Leopard. I decided to rename it to TotalTerminal with OS X Lion release. TotalTerminal has installer, Sparkle updater and does not depend on [SIMBL](http://www.culater.net/software/SIMBL/SIMBL.php). In the future it will get more bug fixes and hopefully some new features.
-> 
+>
 > The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)
 
 #### Why did you rename it?
@@ -91,8 +91,8 @@ To hide Visor Window, you can either:
 > This affects people who pin TotalTerminal.app icon in the Dock as a permanent icon.
 >
 >When you click TotalTerminal.app icon in the Dock, the system launches TotalTerminal.app. But [TotalTerminal.app is just a lightweight launcher](https://github.com/binaryage/totalterminal-installer/tree/master/TotalTerminal.app) which:
->  
->  1. launches Terminal.app (if it is not running) 
+>
+>  1. launches Terminal.app (if it is not running)
 >  2. injects TotalTerminal plugin into it.
 >  3. quits
 >
@@ -105,7 +105,7 @@ To hide Visor Window, you can either:
 >Other option is to `open /Applications/Utilities/Terminal.app/Contents/Info.plist` and add LSUIElement entry and set it to true (in Property List Editor is displays as "Application is agent (UIElement)").
 
 #### Where are TotalTerminal settings stored?
-> TotalTerminal settings are stored with Terminal.app settings. You can `open ~/Library/Preferences/com.apple.Terminal.plist` and tweak the values (better to do this when Terminal.app is not running). 
+> TotalTerminal settings are stored with Terminal.app settings. You can `open ~/Library/Preferences/com.apple.Terminal.plist` and tweak the values (better to do this when Terminal.app is not running).
 If you have troubles with TotalTerminal settings, delete this file and restart Terminal.app. The file will be recreated with default values.
 
 #### How can I open a new terminal window the old way, as a classic OSX window?
@@ -143,7 +143,7 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
     $(function() {
         $('.changelogx').load('changelog-beta.html?x='+((Math.random()+"").substring(2))+' #page');
     });
-    
+
     function showBetaHint() {
         $('.betahint').toggle();
     }
