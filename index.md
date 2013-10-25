@@ -5,9 +5,9 @@ product: totalterminal
 product_title: TotalTerminal
 product_subtitle: a system-wide terminal available on a hot-key
 note: If you like TotalTerminal, check out also <a href="http://totalfinder.binaryage.com">TotalFinder</a>.
-download: http://downloads.binaryage.com/TotalTerminal-1.3.dmg
-downloadtitle: Download v1.3
-downloadsubtitle: Requires OS X 10.6 or higher
+download: http://downloads.binaryage.com/TotalTerminal-1.4.2.dmg
+downloadtitle: Download v1.4.2
+downloadsubtitle: Requires OS X 10.7 or higher
 repo: http://github.com/binaryage/totalterminal
 meta_title: TotalTerminal is a system-wide terminal accessible via a hot-key
 meta_keywords: totalterminal,terminal,osx,simbl,binaryage,productivity,software,visor
@@ -63,7 +63,10 @@ To hide Visor Window, you can either:
 > There are several reasons. First, Visor Window is also a feature of [TotalFinder](http://totalfinder.binaryage.com), my other application plugin. This was causing confusion. Second, TotalFinder and TotalTerminal make up nicer branding. It is immediately obvious they are related and TotalTerminal has something to do with Terminal.app. Also searching for TotalTerminal through social media is easier for me. Visor is a general term.
 
 #### Do I need to uninstall Visor.bundle prior TotalTerminal installation?
-> Not necessary. TotalTerminal installer will remove it automatically. Visor and TotalTerminal conflict so you cannot have them running both.
+> Not necessarily. TotalTerminal installer will remove it automatically. Visor and TotalTerminal conflict so you cannot have them running both.
+
+#### Does TotalTerminal work on OS X 10.9 (Mavericks)?
+> Yes, since 1.4.
 
 #### Does TotalTerminal work on OS X 10.8 (Mountain Lion)?
 > Yes, since 1.2.
@@ -72,10 +75,10 @@ To hide Visor Window, you can either:
 > Yes, since 1.0.
 
 #### Does TotalTerminal work on OS X 10.6 (Snow Leopard)?
-> Yes, since 1.0.
+> Yes, historical versions 1.0 up to 1.3.x.
 
 #### Does TotalTerminal work on OS X 10.5 (Leopard)?
-> It should work, but I no longer support Leopard.
+> Version 1.0 should work under Leopard.
 
 #### Does TotalTerminal work on OS X 10.4 (Tiger)?
 > Tiger was supported by early Visor (pre 1.5).
@@ -98,11 +101,10 @@ To hide Visor Window, you can either:
 >
 >You end up with two Terminal icons in the Dock: one for running Terminal.app and second for pinned TotalTerminal.app (which is not running anymore after injecting the plugin).
 >
->You can hide an app from the Dock but not dynamically. You have to tweak its Info.plist and set LSUIElement to true. TotalTerminal will never modify your Terminal.app files so it cannot force running Terminal to hide icon in the Dock. On the other hand it cannot hide its own icon from the Dock, because it is not running and you have pinned it explicitly, which is not affected by LSUIElement set on TotalTerminal.app.
->
->I would recommend you to use some other means of launching TotalTerminal.app for example via Spotlight or some launcher like Alfred.app, or put it into Startup Items. Maybe I will come up with some better solution in the future. Any ideas?
->
->Other option is to `open /Applications/Utilities/Terminal.app/Contents/Info.plist` and add LSUIElement entry and set it to true (in Property List Editor is displays as "Application is agent (UIElement)").
+
+#### How to remove Terminal from App Switcher (CMD+TAB)?
+
+Please folow [this thread](https://github.com/binaryage/totalterminal/issues/3) to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app's Info.plist - this would break code signature from Apple.
 
 #### Where are TotalTerminal settings stored?
 > TotalTerminal settings are stored with Terminal.app settings. You can `open ~/Library/Preferences/com.apple.Terminal.plist` and tweak the values (better to do this when Terminal.app is not running).
