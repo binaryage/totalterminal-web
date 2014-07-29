@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://developers.facebook.com/schema/">
+<html lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://developers.facebook.com/schema/" class="ba">
   <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
     <title>TotalTerminal is a system-wide terminal accessible via a hot-key</title>
     <link rel="canonical" href="http://totalterminal.binaryage.com"/>
+    <link rel="shortcut icon" href="http://static.binaryage.com/5604bda0_favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="http://static.binaryage.com/5604bda0_favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="http://static.binaryage.com/6055f026_shared_css_site.css" type="text/css"/>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="title" content="TotalTerminal is a system-wide terminal accessible via a hot-key"/>
     <meta name="description" content="TotalTerminal is a plugin for Terminal.app which provides Quake-style terminal window available on keyboard shortcut"/>
     <meta name="keywords" content="totalterminal,terminal,osx,simbl,binaryage,productivity,software,visor"/>
-    <link rel="image_src" href="http://www.binaryage.com/shared/img/icons/totalterminal-256.png"/>
+    <link rel="image_src" href="http://static.binaryage.com/6902f2d3_shared_img_icons_totalterminal-128.png"/>
     <meta name="google-site-verification" content="N_xzdr6ymSUQFhAEvQg7f-sp1JAeJCdW2JuaRg-da0w"/>
     <meta property="fb:admins" content="antonin.hildebrand"/>
     <meta property="og:email" content="support@binaryage.com"/>
@@ -18,144 +22,180 @@
     <meta property="og:url" content="http://totalterminal.binaryage.com"/>
     <meta property="og:image" content="http://www.binaryage.com/shared/img/icons/totalterminal-256.png"/>
     <link href="http://feeds.feedburner.com/binaryage-blog" type="application/atom+xml" rel="alternate" title="Ideas from BinaryAge"/>
-    <link rel="shortcut icon" href="http://static.binaryage.com/5604bda0_favicon.ico" type="image/x-icon"/>
-    <link rel="icon" href="http://static.binaryage.com/5604bda0_favicon.ico" type="image/x-icon"/>
-    <script type="text/javascript" charset="utf-8">setTimeout(function(){$("html").addClass("wf-fake-active")},2e3)</script>
-    <style type="text/css">.js .wf{opacity:0 !important;filter:alpha(opacity=0) !important;-webkit-transition:opacity .5s ease 0;-moz-transition:opacity .5s ease 0;-o-transition:opacity .5s ease 0;transition:opacity .5s ease 0;font-smoothing:antialiased;-webkit-font-smoothing:antialiased}.wf-active .wf,.wf-fake-active .wf{opacity:1 !important;filter:alpha(opacity=100) !important}</style>
-    <link rel="stylesheet" href="http://static.binaryage.com/167cd13d_shared_css_site.css" type="text/css"/>
-    <script type="text/javascript" charset="utf-8">function css_browser_selector(e){var r=e.toLowerCase(),o=function(e){return r.indexOf(e)>-1},i="gecko",n="webkit",t="safari",s="opera",f="mobile",a=document.documentElement,d=[!/opera|webtv/i.test(r)&&/msie\s(\d)/.test(r)?"ie ie"+RegExp.$1:o("firefox/2")?i+" ff2":o("firefox/3.5")?i+" ff3 ff3_5":o("firefox/3.6")?i+" ff3 ff3_6":o("firefox/3")?i+" ff3":o("gecko/")?i:o("opera")?s+(/version\/(\d+)/.test(r)?" "+s+RegExp.$1:/opera(\s|\/)(\d+)/.test(r)?" "+s+RegExp.$2:""):o("konqueror")?"konqueror":o("blackberry")?f+" blackberry":o("android")?f+" android":o("chrome")?n+" chrome":o("iron")?n+" iron":o("applewebkit/")?n+" "+t+(/version\/(\d+)/.test(r)?" "+t+RegExp.$1:""):o("mozilla/")?i:"",o("j2me")?f+" j2me":o("iphone")?f+" iphone":o("ipod")?f+" ipod":o("ipad")?f+" ipad":o("mac")?"mac":o("darwin")?"mac":o("webtv")?"webtv":o("win")?"win"+(o("windows nt 6.0")?" vista":""):o("freebsd")?"freebsd":o("x11")||o("linux")?"linux":"","js"];c=d.join(" ");a.className+=" "+c;return c}css_browser_selector(navigator.userAgent)</script>
-    <script type="text/javascript" charset="utf-8">if(!window.console){window.console={};function fn(){opera.postError(arguments)}["log","debug","info","warn","error","assert","dir","dirxml","group","groupEnd","time","timeEnd","count","trace","profile","profileEnd"].forEach(function(o){window.console[o]=fn})}(function(){var o=["log","debug","info","warn","error","assert","dir","dirxml","group","groupEnd","time","timeEnd","count","trace","profile","profileEnd"];if(!window.console){window.console={}}for(var n in o){window.console[o[n]]=window.console[o[n]]||function(){return}}})()</script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8">function parseUri(r){var e=parseUri.options,o=e.parser[e.strictMode?"strict":"loose"].exec(r),s={},t=14;while(t--)s[e.key[t]]=o[t]||"";s[e.q.name]={};s[e.key[12]].replace(e.q.parser,function(r,o,t){if(o)s[e.q.name][o]=t});return s}parseUri.options={strictMode:false,key:["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],q:{name:"queryKey",parser:/(?:^|&)([^&=]*)=?([^&]*)/g},parser:{strict:/^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,loose:/^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/}}</script>
-    <script type="text/javascript">WebFontConfig={google:{families:["Play:regular,bold"]}};(function(){var t=document.createElement("script");t.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js";t.type="text/javascript";t.async="true";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)})()</script>
-    <script src="http://static.binaryage.com/1ed3f115_shared_js_code.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>WebFont.load({google:{families:["Play:400,700:latin"]}})</script>
+    <script src="http://static.binaryage.com/df2e4839_shared_js_code.js"></script>
     <script type="text/javascript">window["ga"]=function(){}</script>
-    <script>window["ga"]=undefined;(function(e,a,n,t,i,o,r){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;o=a.createElement(n),r=a.getElementsByTagName(n)[0];o.async=1;o.src=t;r.parentNode.insertBefore(o,r)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-8404259-1","auto",{allowLinker:true});ga("send","pageview");ga("require","linker");ga("linker:autoLink",["fastspring.com","binaryage.com"],true)</script>
+    <script>window["ga"]=undefined;(function(e,n,a,t,i,o,r){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;o=n.createElement(a),r=n.getElementsByTagName(a)[0];o.async=1;o.src=t;r.parentNode.insertBefore(o,r)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-8404259-1","auto",{allowLinker:true});ga("send","pageview");ga("require","linker");ga("linker:autoLink",["fastspring.com"],true)</script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
   </head>
   <body id="page-totalterminal-index">
     <div id="topbar">
       <div class="container topbar">
-        <div class="topbar-buttons">
-          <div class="topbar-labs wf">
-            labs
-          </div>
-          <div class="topbar-testimonials wf">
-            testimonials
+        <div class="row">
+          <div class="col-md-12">
+            <div class="relativize">
+              <div class="topbar-buttons">
+                <div class="topbar-about">
+                  <a href="http://www.binaryage.com/about"><i class="fa fa-info-circle"></i>about</a>
+                </div>
+                <!--<div class="topbar-labs">
+                  <a href="http://www.binaryage.com/labs"><i class="fa fa-lightbulb-o"></i>labs</a>
+                </div> -->
+                <!--<div class="topbar-testimonials">
+                  <i class="fa fa-twitter"></i>testimonials
+                </div> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="header" class="menu-products">
-      <div class="container header">
-        <a href="http://www.binaryage.com" title="BinaryAge Software">
-          <div class="header-logo">
-            <div class="header-logo-hover"></div>
+    <div id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="relativize">
+              <a href="http://www.binaryage.com" title="BinaryAge Software">
+                <div class="binaryage-logo">
+                  <svg class="logo">
+                    <g class="logo-badge">
+                      <rect class="logo-badge-background" x="0" y="0" rx="4" ry="4" width="60" height="54"/>
+                      <path class="logo-letter-b" d=" M6,47 L6,17 12,17 12,25 29,25 29,47 Z M12,42 L12,30 23,30 23,42 Z"/>
+                      <path class="logo-letter-a" d=" M32,47 L32,34 49,34 49,30 32,30 32,25 54,25 54,47 Z M37,42 L37,39 49,39 49,42 Z"/>
+                    </g>
+                    <g class="logo-label" transform="translate(71, 22)">
+                      <g class="logo-word-binary">
+                        <path class="logo-label-letter-b" transform="translate(0, 0)" d=" M0,25 L0,0 5,0 5,7 20,7 20,25 Z M5,21 L5,11 15,11 15,21 Z"/>
+                        <path class="logo-label-letter-i" transform="translate(22, 0)" d=" M0,25 L0,7 5,7 5,25 Z M0,3 L5,3 5,0 0,0 Z"/>
+                        <path class="logo-label-letter-n" transform="translate(29, 0)" d=" M0,25 L0,7 20,7 20,25 15,25 15,11 5,11 5,25 Z"/>
+                        <path class="logo-label-letter-a" transform="translate(51, 0)" d=" M0,25 L0,14 15,14 15,11 0,11 0,7 20,7 20,25 Z M5,21 L5,18 15,18 15,21 Z"/>
+                        <path class="logo-label-letter-r" transform="translate(73, 0)" d=" M0,25 L0,7 20,7 20,11 5,11 5,25 Z"/>
+                        <path class="logo-label-letter-y" transform="translate(95, 0)" d=" M0,25 L0,7 5,7 5,21 15,21 15,7 20,7 20,32 0,32 0,28 15,28 15,25 Z"/>
+                      </g>
+                      <g class="logo-word-age" transform="translate(118, 0)">
+                        <path class="logo-label-letter-a" transform="translate(0, 0)" d=" M0,25 L0,14 15,14 15,11 0,11 0,7 20,7 20,25 Z M5,21 L5,18 15,18 15,21 Z"/>
+                        <path class="logo-label-letter-g" transform="translate(22, 0)" d=" M0,25 L0,7 20,7 20,32 0,32 0,28 15,28 15,25 Z M5,21 L5,11 15,11 15,21 Z"/>
+                        <path class="logo-label-letter-e" transform="translate(44, 0)" d=" M0,25 L0,7 20,7 20,18 5,18 5,21 20,21 20,25 Z M5,14 L5,11 15,11 15,14 Z"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="relativize">
+              <ul class="header-menu menu-selected-products">
+                <li class="menu-item-store"><a href="http://www.binaryage.com/store"><i class="fa fa-shopping-cart"></i><span>store</span></a></li>
+                <li class="menu-item-products"><a href="http://www.binaryage.com"><i class="fa fa-star"></i><span>products</span></a></li>
+                <li class="menu-item-blog"><a href="http://blog.binaryage.com"><i class="fa fa-bullhorn"></i><span>blog</span></a></li>
+                <li class="menu-item-support"><a href="http://discuss.binaryage.com"><i class="fa fa-comments"></i><span>support</span></a></li>
+              </ul>
+            </div>
           </div>
-        </a>
-        <div class="header-motto arrow"></div>
-        <div class="header-selector"></div>
-        <ul class="header-menu">
-          <li class="menu-item-store wf"><a href="http://www.binaryage.com/store"><span>store</span></a></li>
-          <li class="menu-item-products wf"><a href="http://www.binaryage.com"><span>products</span></a></li>
-          <li class="menu-item-blog wf"><a href="http://blog.binaryage.com"><span>blog</span></a></li>
-          <li class="menu-item-hints wf"><a href="http://hints.binaryage.com"><span>hints</span></a></li>
-          <li class="menu-item-support wf"><a href="http://discuss.binaryage.com"><span>support</span></a></li>
-        </ul>
+        </div>
       </div>
     </div>
-    <div id="main">
-      <div class="wf">
-        <div class="main-product" id="product-totalterminal">
-          <div class="container">
-            <div class="main-product-left span-12">
-              <div class="product-logo-box">
-                <img class="product-icon" src="http://static.binaryage.com/af5e5355_shared_img_icons_totalterminal-64.png"/>
+    <div id="main" class="cf">
+      <div id="totalterminal-header" class="product-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="product-box">
+                <img class="product-icon" src="http://static.binaryage.com/b9bcaf3b_shared_img_icons_totalterminal-256.png"/>
                 <div class="product-tagline">
-                  <h1 class="product-title">TotalTerminal</h1><div class="plusone-wrapper"><g:plusone size="medium"></g:plusone></div>
+                  <h1 class="product-title">TotalTerminal</h1>
                   <h2 class="product-subtitle">a system-wide terminal available on a hot-key</h2>
-                </div>
-              </div>
-              <div class="product-buttons-box">
-                <div class="product-buttons">
-                  <a id="o-download" href="http://downloads.binaryage.com/TotalTerminal-1.5.dmg" class="button product-button-download">
-                    <div><div>Download v1.5<div class="product-specs">Requires OS X 10.8 or higher</div></div></div>
-                  </a>
-                  <div class="clear"></div>
-                </div>
-                <div class="product-note-box">
-                  <div class="product-note">If you like TotalTerminal, check out also <a href="http://totalfinder.binaryage.com">TotalFinder</a>.</div>
-                </div>
-              </div>
-              <div class="social-box">
-                <div class="social-box-inner">
-                  <div class="retweet">
+                  <div class="product-social">
+                    <div class="social-box">
+                      <div class="fblike-wrapper">
+                        <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                      </div>
+                      <div class="twitter-wrapper">
+                        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <script>!function(t,e,r){var i,n=t.getElementsByTagName(e)[0],s=/^http:/.test(t.location)?"http":"https";if(!t.getElementById(r)){i=t.createElement(e);i.id=r;i.src=s+"://platform.twitter.com/widgets.js";n.parentNode.insertBefore(i,n)}}(document,"script","twitter-wjs")</script>
+                      </div>
+                      <div class="plusone-wrapper">
+                        <g:plusone size="medium"></g:plusone>
+                      </div>
+                    </div>
                   </div>
-                  <script>$(".retweet").html(writeCapture.sanitize('<a href="http://twitter.com/share" class="twitter-share-button retweet" data-count="vertical" data-via="binaryage">Tweet</a><scr'+'ipt type="text/javascript" src="http://platform.twitter.com/widgets.js"></scr'+"ipt>"))</script>
                 </div>
-                <div class="clear"></div>
               </div>
             </div>
-            <div class="main-product-right span-12 last">
-              <div class="main-screenshot">
-                <div id="screenshot-box-1" class="screenshot-box no-shadow">
-                  <a id="o-shot1" href="http://static.binaryage.com/a5de11df_shared_img_totalterminal-mainshot-full.png" class="overlayable" title="TotalTerminal's Visor window with nice colors!">
-                    <img src="http://static.binaryage.com/a8537567_shared_img_totalterminal-mainshot.png"/>
-                    <div class="zoom-icon"></div>
+            <div class="col-md-6">
+              <div class="product-buttons">
+                <div class="button-container">
+                  <a href="http://downloads.binaryage.com/TotalTerminal-1.5.dmg" id="o-download-button" class="button product-button-download">
+                    <span><i class="fa fa-download fa-lg"></i>Download v1.5</span>
                   </a>
+                  <div class="button-note">
+                    <i class="fa fa-laptop"></i> Compatible with OS X 10.8, 10.9 and 10.10<br/>
+                    <a href="#compatibility">Need version for older OS?</a><br/>
+                    <a href="#changelog">What's new?</a><br/>
+                  </div>
                 </div>
-                <div class="clear"></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="main-tabs" id="tabs-totalterminal">
-          <div class="container">
-            <div class="tab-bar">
-              <ul class="tabs"></ul>
-            </div>
-            <div class="panes"></div>
+      </div>
+      <div class="product-tabs-wrapper" id="tabs-totalterminal">
+        <div class="container">
+          <div class="product-tabs doc-page">
+            <ul></ul>
           </div>
         </div>
-        <div class="main-content-here" style="display:none">
+      </div>
+      <div id="totalterminal-content" class="product-content">
+        <div class="container">
+          <!-- shots: [{
+          title: "TotalTerminal's Visor window with nice colors!",
+          thumb: "/shared/img/totalterminal-mainshot.png",
+          full: "/shared/img/totalterminal-mainshot-full.png"
+          }] -->
+          <h2>About</h2>
+          <h3>TotalTerminal is a plugin for Terminal.app.</h3>
+          <p>It provides persistent Visor Window which slides down when you press a hot-key (remember Quake console?).</p>
+          <p><img src="http://static.binaryage.com/a5de11df_shared_img_totalterminal-mainshot-full.png"/></p>
           <h2>Installation</h2>
-          <p>TotalTerminal is a plugin for Terminal.app. It provides persistent Visor Window which slides down when you press a hot-key. Remember Quake Console?</p>
+          <h3>TotalTerminal has an installer</h3>
           <ol>
-            <li> Run installer</li>
-            <li> Configure your keyboard trigger by selecting the <code>Preferences...</code> -> <code>TotalTerminal</code> and edit your keyboard hot-key. By default it is <code>CTRL+~</code></li>
+            <li> Download latest <a href="http://downloads.binaryage.com/TotalTerminal-1.5.dmg">TotalTerminal.dmg</a> and run the installer.</li>
+            <li> Configure your keyboard trigger by selecting the <code>Preferences... -&gt; TotalTerminal</code> and edit your keyboard hot-key. By default it is <code>CTRL+~</code>.</li>
           </ol>
           <p>Then you can trigger Visor Window with your hot-key from any application to get an instant terminal session.</p>
-          <p>To hide Visor Window, you can either:</p>
+          <h3>To hide Visor window, you can either:</h3>
           <ul>
             <li>re-trigger with your key-combo</li>
             <li>optionally, you can click off the TotalTerminal window</li>
+            <li>optionally, you can hit ESC (if enabled in TotalTerminal preferences)</li>
           </ul>
-          <hr/>
-          <p><span style="color: #a00">For original Visor 2.2 users: TotalTerminal plugin is not injected into Terminal.app automatically like with SIMBL. You have to launch TotalTerminal.app to inject the plugin into Terminal.app. You might want to put TotalTerminal.app into Startup Items.</span></p>
-          <h2>FAQ</h2>
-          <h4>What is the difference between Visor.bundle and TotalTerminal.app?</h4>
-          <blockquote><p>TotalTerminal supersedes Visor. Visor.bundle is a SIMBL plugin which was originally written by Nicholas Jitkoff from <a href="http://blacktree.com">Blacktree</a>. Original Visor was introduced for OS X - Tiger. I have been developing it since Leopard. I decided to rename it to TotalTerminal with OS X Lion release. TotalTerminal has installer, Sparkle updater and does not depend on <a href="http://www.culater.net/software/SIMBL/SIMBL.php">SIMBL</a>. In the future it will get more bug fixes and hopefully some new features.</p>
-          <p>The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)</p></blockquote>
-          <h4>Why did you rename it?</h4>
-          <blockquote><p>There are several reasons. First, Visor Window is also a feature of <a href="http://totalfinder.binaryage.com">TotalFinder</a>, my other application plugin. This was causing confusion. Second, TotalFinder and TotalTerminal make up nicer branding. It is immediately obvious they are related and TotalTerminal has something to do with Terminal.app. Also searching for TotalTerminal through social media is easier for me. Visor is a general term.</p></blockquote>
-          <h4>Do I need to uninstall Visor.bundle prior TotalTerminal installation?</h4>
-          <blockquote><p>Not necessarily. TotalTerminal installer will remove it automatically. Visor and TotalTerminal conflict so you cannot have them running both.</p></blockquote>
+          <h2>Changelog</h2>
+          <script src="http://static.binaryage.com/a3e50f24_changelog.js" type="text/javascript" charset="utf-8"></script>
+          <div class="changelogx">
+            <div id="changelog-content" class="changelog"></div>
+          </div>
+          <script type="text/javascript" charset="utf-8">(function(){var n,t,e;t=function(){return(Math.random()+"").substring(2)};e="changelog-beta.txt";n=function(n){return n.replace(/\./g,"\\.")};$.get(""+e+"?x="+t(),function(n){var t,e,a;t=parsePlaintextChangelog(n);e=function(n){return"http://downloads.binaryage.com/TotalTerminal-"+n+".dmg"};a=function(n){return"released on "+n};return generateChangelogHTML("#changelog-content",t,e,a)})}).call(this)</script>
+          <h2>Compatibility</h2>
+          <h4>Does TotalTerminal work on OS X 10.10 (Yosemite)?</h4>
+          <blockquote><p>Yes, since 1.5.</p></blockquote>
           <h4>Does TotalTerminal work on OS X 10.9 (Mavericks)?</h4>
           <blockquote><p>Yes, since 1.4.</p></blockquote>
           <h4>Does TotalTerminal work on OS X 10.8 (Mountain Lion)?</h4>
           <blockquote><p>Yes, since 1.2.</p></blockquote>
           <h4>Does TotalTerminal work on OS X 10.7 (Lion)?</h4>
-          <blockquote><p>Yes, since 1.0.</p></blockquote>
+          <blockquote><p>No, last compatible version is 1.4.11.</p></blockquote>
           <h4>Does TotalTerminal work on OS X 10.6 (Snow Leopard)?</h4>
-          <blockquote><p>Yes, historical versions 1.0 up to 1.3.x.</p></blockquote>
+          <blockquote><p>No, last compatible version is 1.3.</p></blockquote>
           <h4>Does TotalTerminal work on OS X 10.5 (Leopard)?</h4>
-          <blockquote><p>Version 1.0 should work under Leopard.</p></blockquote>
-          <h4>Does TotalTerminal work on OS X 10.4 (Tiger)?</h4>
-          <blockquote><p>Tiger was supported by early Visor (pre 1.5).</p></blockquote>
-          <h4>Where I can get older versions?</h4>
-          <blockquote><p>Prior 1.0, TotalTerminal was known as <a href="http://visor.binaryage.com">Visor</a>. It was brought to you by Alcor (<a href="http://blacktree.com">Blacktree</a>), kudos man!</p></blockquote>
+          <blockquote><p>No, last compatible version is 1.0.</p></blockquote>
+          <h2>FAQ</h2>
           <h4>How do I uninstall TotalTerminal?</h4>
           <blockquote><p>You may use Status Menu Icon and select <code>Uninstall TotalTerminal</code>. Alternatively you may <a href="#changelog">download TotalTerminal DMG</a> again and use <code>TotalTerminal Uninstaller</code> which is present there.</p></blockquote>
+          <h4>What is the difference between Visor.bundle and TotalTerminal.app?</h4>
+          <blockquote><p>TotalTerminal supersedes Visor. Visor.bundle is a SIMBL plugin which was originally written by Nicholas Jitkoff from <a href="http://blacktree.com">Blacktree</a>. Original Visor was introduced for OS X - Tiger. I have been developing it since Leopard. I decided to rename it to TotalTerminal with OS X Lion release. TotalTerminal has installer, Sparkle updater and does not depend on <a href="http://www.culater.net/software/SIMBL/SIMBL.php">SIMBL</a>. In the future it will get more bug fixes and hopefully some new features.</p>
+          <p>The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)</p></blockquote>
           <h4>I see two Terminal.app icons in the Dock. How should I get rid of it?</h4>
           <blockquote><p>This affects people who pin TotalTerminal.app icon in the Dock as a permanent icon.</p>
             <p>When you click TotalTerminal.app icon in the Dock, the system launches TotalTerminal.app. But <a href="https://github.com/binaryage/totalterminal-installer/tree/master/TotalTerminal.app">TotalTerminal.app is just a lightweight launcher</a> which:</p>
@@ -166,7 +206,7 @@
             </ol>
           <p>You end up with two Terminal icons in the Dock: one for running Terminal.app and second for pinned TotalTerminal.app (which is not running anymore after injecting the plugin).</p></blockquote>
           <h4>How to remove Terminal from App Switcher (CMD+TAB)?</h4>
-          <p>Please folow <a href="https://github.com/binaryage/totalterminal/issues/3">this thread</a> to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app's Info.plist - this would break code signature from Apple.</p>
+          <blockquote><p>Please folow <a href="https://github.com/binaryage/totalterminal/issues/3">this thread</a> to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app's Info.plist - this would break code signature from Apple.</p></blockquote>
           <h4>Where are TotalTerminal settings stored?</h4>
           <blockquote><p>TotalTerminal settings are stored with Terminal.app settings. You can <code>open ~/Library/Preferences/com.apple.Terminal.plist</code> and tweak the values (better to do this when Terminal.app is not running).
           If you have troubles with TotalTerminal settings, delete this file and restart Terminal.app. The file will be recreated with default values.</p></blockquote>
@@ -188,48 +228,34 @@
           <blockquote><p>No, TerminalColours is integrated into TotalTerminal 1.0 and later. Actually it conflicts with TotalTerminal if installed as SIMBL plugin.</p></blockquote>
           <h4>Do I need to install CopyOnSelect SIMBL with TotalTerminal?</h4>
           <blockquote><p>No, CopyOnSelect is integrated into TotalTerminal 1.0 and later. It is a configurable option in TotalTerminal Preferences (disabled by default).</p></blockquote>
-          <h2>Changelog</h2>
-          <div class="changelogx"></div>
-          <script type="text/javascript" charset="utf-8">$(function(){$(".changelogx").load("changelog-beta.html?x="+(Math.random()+"").substring(2)+" #page")});function showBetaHint(){$(".betahint").toggle()}</script>
           <h2>Special Guest</h2>
           <h3>Ben Stiglitz about Terminal.app</h3>
-          <div>Ben is the author of Terminal.app. Kudos!</div>
+          <h5>Ben is the author of Terminal.app. Kudos!</h5>
           <p><embed src='http://rubyconf2008.confreaks.com/player.swf' height='260' width='640' allowscriptaccess='always' allowfullscreen='true' flashvars='file=http%3A%2F%2Frubyconf2008.confreaks.com%2Fvideos%2Fterminalapp-small.mp4&image=images%2Fterminalapp-preview.jpg&plugins=viral-1'/></p>
         </div>
-        <script>$(function(){var a=$(".panes");var e=$(".tabs");var t;var s=$(".main-content-here > *");s.each(function(s){var r=$(this);var n=r.attr("tagName");if(n=="SCRIPT")return;if(n=="NOSCRIPT")return;if(n=="STYLE")return;if(r.hasClass("panes")||r.hasClass("tabs"))return;if(r.attr("tagName")=="H2"){var i=r.html();var d=i.toLowerCase().replace(/[^a-z0-9]/g,"-");var p=$("<li>");var v=$('<a class="tbx">').attr("href","#"+d).html(i);p.append(v);v.append('<div class="shadow"></div>');e.append(p);t=$("<div>").addClass("wikistyle").addClass(d);a.append(t);r.remove();t.append($("<h2>").html(i))}else{if(t){t.append(r)}}});$("ul.tabs").tabs("div.panes > div");$("ul.tabs a").history()})</script>
-        <script>$(function(){$(".product-thumbs-scrollable").scrollable({size:5});$(".product-thumbs-items img").click(function(){var t=$(this);var r=$(".screenshot-box:visible");var i=$(t.attr("rel"));if(i[0]===r[0])return;r.fadeOut();i.fadeIn()}).filter(":first").click()})</script>
-        <div class="simple_overlay" id="overlay-gallery" style="display:none">
-          <a class="overlay-prev">prev</a>
-          <a class="overlay-next">next</a>
-          <div class="overlay-info"></div>
-          <img class="overlay-progress" src="http://static.binaryage.com/32e8f83d_shared_img_twitter-loader.gif"/>
-        </div>
-        <script>(function(){$(".overlayable").overlay({expose:"#f1f1f1",target:"#overlay-gallery"}).gallery({disabledClass:"disabled-overlay",prev:".overlay-prev",next:".overlay-next",info:".overlay-info",progress:".overlay-progress",opacity:1,speed:200,template:"[${index}/${total}] ${title}"})})()</script>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div id="tweets-section">
-      <div class="container" style="position: relative">
-        <ol id="tweets" class="statuses"></ol>
       </div>
     </div>
     <div id="footer">
       <div class="container">
-        <div class="footer-separator"></div>
-        <div class="footerbox">
-          <div class="facebook-like-button-wrapper">
-            <fb:like width="650" href="http://totalterminal.binaryage.com" layout="standard" show_faces="false" font="arial"></fb:like>
+        <div class="row">
+          <div class="col-md-8">
           </div>
-          <div class="footer-links wf">
-            <a href="http://github.com/binaryage/totalterminal">source code</a> |
-            <a href="http://www.binaryage.com/about.html">contact</a>
+          <div class="col-md-4">
+            <div class="footer-box-right">
+              <div class="footer-copyright">
+                <div class="footer-license">
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0"><img title="the website license" alt="Creative Commons License" style="border-width:0" src="http://static.binaryage.com/69a4ba35_shared_img_byccnd.png"/></a>
+                </div>
+                <a href="http://www.binaryage.com/about">BinaryAge Limited</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div id="fb-root"></div>
-    <script type="text/javascript">window.fbAsyncInit=function(){FB.init({appId:"332451499524",status:true,cookie:true,xfbml:true})};(function(){var t=document.createElement("script");t.async=true;t.src=document.location.protocol+"//connect.facebook.net/en_US/all.js";document.getElementById("fb-root").appendChild(t)})()</script>
-    <script type="text/javascript" charset="utf-8">$(function(){var e;$(".topbar-testimonials").bind("click",function(){if(window.SSTracker){SSTracker.pushState("praise")}if(!e){$("#tweets").tweet({user:"binaryage"});e=true}})})</script>
+    <script>(function(e,t,n){var a,c=e.getElementsByTagName(t)[0];if(e.getElementById(n))return;a=e.createElement(t);a.id=n;a.src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=332451499524";c.parentNode.insertBefore(a,c)})(document,"script","facebook-jssdk")</script>
+    <script type="text/javascript" charset="utf-8">$(function(){var t;$(".topbar-testimonials").bind("click",function(){if(!t){$("#tweets").tweet({user:"binaryage"});t=true}})})</script>
     <script type="text/javascript" charset="utf-8">$(function(){setTimeout(function(){var i=location.hash.substring(1);if(i.substring(0,2)=="o-"){$("#"+i).trigger("click")}},500)})</script>
     <script type="text/javascript" charset="utf-8">$(function(){var a=document.location.host;if(a.substring(a.length-3)=="org"){$("a").each(function(){var a=$(this);var r=a.attr("href");if(r){if(r.match("binaryage.com")){r=r.replace("binaryage.com","binaryage.org")}var t=document.location+"";a.attr("href",r)}})}})</script>
     <script type="text/javascript">var _gauges=_gauges||[];(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.id="gauges-tracker";e.setAttribute("data-site-id","4f10d65d844d52139500000b");e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
