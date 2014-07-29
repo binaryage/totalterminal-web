@@ -1,358 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html;charset=utf-8">
-        <title>What's new in pre-release TotalTerminal?</title>
-        <style type="text/css" media="screen">
-            body,h1,h2,h3,h4,p,table{padding:0;margin:0;}
-            ol li{margin-bottom:5px;}
-            a{text-decoration:none;font-variant:normal;color:#1e51be;}
-            a:hover{text-decoration:underline;}
-            *{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif}
-            #page{padding-right:20px;padding-top:35px;padding-left:20px;font-size:9pt;}
-            #page p{padding-top:5px;padding-bottom:5px;font-size:9pt;line-height:14pt;}
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>What's new in pre-release TotalTerminal?</title>
+    <style type="text/css" media="screen">
+      body,h1,h2,h3,h4,p,table{padding:0;margin:0;}
+      a{text-decoration:none;font-variant:normal;color:#1e51be;}
+      a:hover{text-decoration:underline;}
+      body {
+        font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;
+        font-size: 12px;
+      }
 
-            .changelog body,.changelog h1,.changelog h2,.changelog h3,.changelog h4,.changelog p,.changelog table{padding:0;margin:0;}
-            .changelog ol li{margin-bottom:5px;}
-            .changelog a{text-decoration:none;font-variant:normal;color:#1e51be;}
-            .changelog a:hover{text-decoration:underline;}
+      .changelog .changes{margin:0;padding-left:30px;list-style-type:none;padding-right:10px;padding-top:6px;}
+      .changelog .changes li{margin-bottom:5px;}
 
-            .changelog h1{font-size:12pt;padding-top:5px;padding-bottom:5px;}
-            .changelog h2{font-size:11pt;padding-top:5px;padding-bottom:5px;}
-            .changelog p{padding-top:5px;padding-bottom:5px;font-size:9pt;line-height:14pt;}
-            .changelog div.infobox{border:0px solid silver;margin-bottom:10px;clear:both;}
-            .changelog div.infobox h3{font-size:8pt;border-bottom:1px solid silver;background-color:#e2ecfe;padding:3px 5px;color:#000;}
-            .changelog div.infobox p{padding:5px;font-size:8pt !important;}
-            .changelog div.infobox img.left{float:left;}
-            .changelog ul.changes{margin:0;padding-left:30px;list-style-type:none;padding-right:10px;padding-top:6px;}
-            .changelog ul.changes li{margin-bottom:5px;}
+      .changelog .titlebox { background-color: #eee; border-bottom: 0px solid #aaa; margin-top: 20px; line-height: 20px;}
+      .changelog h4{float:left;font-size: 12px;padding:3px;line-height:16px;font-weight: bold; padding-left: 10px; padding-right:6px; width: 100px; white-space:nowrap; text-align:right;}
+      .changelog h5{margin:0;padding:0;padding:3px;margin-left:6px;font-size:10px;color:#666;line-height:16px;font-weight:normal;}
 
-            .changelog .blog-post-pointer {padding-bottom:5px !important; }
-            .changelog .blog-post-pointer a {font-weight: bold;}
+      .changelog .sticker { float: left; width: 80px; margin-right: 6px; display: block; text-align: right; text-transform: uppercase; }
+      .changelog .sticker b { color: white; font-weight: bold; padding: 1px 6px 2px 6px; -moz-border-radius: 3px; -webkit-border-radius: 3px; font-size: 10px; position: relative; top:-1px; }
+      .changelog .fixed b { background-color: #00A825; }
+      .changelog .new b { background-color: #BCB901; }
+      .changelog .removed b { background-color: #BC0E00; }
+      .changelog .improved b { background-color: #0486BC; }
+      .changelog .note b { background-color: #AEAEAE; }
+      .changelog .info {
+        display: table-cell;
+      }
+      
+      .changes i {
+        color: #999;
+        font-style: normal;
+        font-size: 10px;
+      }
+      
+      .changes em {
+        font-style: normal;
+        background-color: #FCFFDD;
+        padding: 0px 2px;
+        border: 1px solid #ccc;
+        color: #999;
+        border-radius: 2px;
+      }
 
-            .changelog .titlebox { background-color: #eee; border-bottom: 0px solid #aaa; margin-top: 20px; line-height: 20px;}
-            .changelog h4{float:left;font-size: 12px;padding:3px;line-height:16px;font-weight: bold; padding-left: 10px; padding-right:6px; width: 90px; white-space:nowrap; text-align:right;}
-            .changelog h5{margin:0;padding:0;padding:3px;margin-left:6px;font-size:10px;color:#666;line-height:16px;font-weight:normal;}
-
-            .changelog .sticker { float: left; width: 70px; display: block; text-align: right; }
-            .changelog .sticker b { color: white; font-weight: bold; padding: 1px 6px 2px 6px; -moz-border-radius: 3px; -webkit-border-radius: 3px; font-size: 10px; position: relative; top:1px; }
-            .changelog .fixed b { background-color: #00A825; }
-            .changelog .new b { background-color: #BCB901; }
-            .changelog .removed b { background-color: #BC0E00; }
-            .changelog .improved b { background-color: #0486BC; }
-            .changelog .note b { background-color: #AEAEAE; }
-            .changelog .info { display: table; padding-left: 6px; }
-
-            .changelog #notice { color: #999; font-size: 10px; }
-        </style>
-    </head>
-    <body>
-        <div id="page" class="changelog" style="padding: 5px 12px">
-            <div id="notice">
-                Note: You are subscribed to pre-release TotalTerminal updates.
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.5.dmg">1.5</a></h4>
-                    <h5>released on Jul 24, 2014</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker new"><b>NEW</b></span> <span class="info">Compatibility with OS X 10.10 (Yosemite).</span></li>
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Double-tap activation via modifier keys reimplemented.</span></li>
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Old <a href="https://code.google.com/p/shortcutrecorder/">ShortcutRecorder</a> code replaced with <a href="https://github.com/shpakovski/MASShortcut">MASShortcut</a> library.</span></li>
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Sharing more code with TotalFinder for easier maintenance.</span></li>
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Not forcing <a href="https://github.com/binaryage/totalterminal/issues/99">Terminal icon in the Dock after launch</a>.</span></li>
-                      <li><span class="sticker removed"><b>REMOVED</b></span> <span class="info">Removed support for OS X 10.7 (Lion).</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.4.11.dmg">1.4.11</a></h4>
-                    <h5>released on Feb 12, 2014</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Installer does not <a href="http://discuss.binaryage.com/t/totalterminal-update-overrides-script-name-breaks-webservers/897">leak environmental variables to newly launched Terminal.app</a>.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.4.10.dmg">1.4.10</a></h4>
-                    <h5>released on Jan 23, 2014</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker new"><b>NEW</b></span> <span class="info">Added new AppleScript commands to <a href="http://discuss.binaryage.com/t/how-to-toggle-visor-window-externally/1286">slide visor programatically</a>.</span></li>
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Do not show Visor during startup (a regression introduced in 1.4.8)</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.4.8.dmg">1.4.8</a></h4>
-                    <h5>released on Jan 17, 2014</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker new"><b>NEW</b></span> <span class="info">Introduced a new Screen preference option: "Screen with Mouse Cursor" <a href="https://github.com/iammattcoleman/totalterminal/commit/1c711b3522e0f248ac02834f247422483fb37817">by Matt Coleman</a>.</span></li>
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Sparkle was <a href="http://discuss.binaryage.com/t/the-update-asked-for-my-password-why/838/6">asking randomly for password</a> when installing DMG. This fix will be effective since next update. With this update you might still be asked. Please enter empty string or anything.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.4.6.dmg">1.4.6</a></h4>
-                    <h5>released on Nov 05, 2013</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker new"><b>NEW</b></span> <span class="info">Introduced a new preferences checkbox for <a href="https://github.com/binaryage/totalterminal/issues/46">allowing switching between tabs via CMD+&lt;number&gt;</a>. The code was based on <a href="https://github.com/dabeeeenster/terminaltabswitching">this SIMBL project</a>.</span></li>
-                      <li><span class="sticker new"><b>NEW</b></span> <span class="info">Introduced a new preferences checkbox for auto-sliding Visor window on Terminal.app activation. Some people <a href="https://github.com/binaryage/totalterminal/issues/86">want it</a> and some <a href="https://github.com/binaryage/totalterminal/issues/50">don't</a>. Enabled by default.</span></li>
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Properly set Visor window dimensions after <a href="https://github.com/binaryage/totalterminal/issues/88">closing and opening Visor window again</a>.</span></li>
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Returned back to Visor window sliding implementation from versions 1.3.x. This should fix choppy sliding animations for <a href="https://github.com/binaryage/totalterminal/issues/80">some</a>&nbsp;<a href="https://github.com/binaryage/totalterminal/issues/90">users</a>.</span></li>
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info"><a href="https://github.com/binaryage/totalterminal/issues/87#issuecomment-27569130">Consistent behavior of auto-sliding</a> when one creates a new Visor window via CMD+N or reopening Terminal by clicking the Dock icon.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.4.5.dmg">1.4.5</a></h4>
-                    <h5>released on Oct 31, 2013</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Implemented new launcher similar to TotalFinder. We should not see <a href="http://discuss.binaryage.com/t/totalterminal-not-loading-on-startup-in-mavericks">AppleScript timeout errors on startup</a> anymore.</span></li>
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">When activating Visor other Terminal windows are not brought to front (they do not change Z-level).</span></li>
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed transferring focus to Visor window when <a href="http://discuss.binaryage.com/t/1-4-4-doesnt-focus-on-visor-when-activated/717">there are other Terminal windows in play</a>.</span></li>
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed <a href="http://discuss.binaryage.com/t/delay-at-window-opening-since-1-4-x">delay when activating Visor via double-keypress</a>.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.4.4.dmg">1.4.4</a></h4>
-                    <h5>released on Oct 26, 2013</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker new"><b>NEW</b></span> <span class="info">Added preferences tweak to "Run Terminal.app as a background app". This allows <a href="https://github.com/binaryage/totalterminal/issues/5">Visor sliding over fullscreen apps</a>.</span></li>
-                      <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Updated status menu icons with retina versions (thanks to <a href="https://github.com/binaryage/totalterminal-i18n/pull/5">Rory Hardy</a>).</span></li>
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Auto-sliding after CMD+TAB takes place only if the Visor window is the only Terminal window in the system (<a href="http://discuss.binaryage.com/t/two-problems-with-1-4-3">the bug report here</a>).</span></li>
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed <a href="http://discuss.binaryage.com/t/totalterminal-lost-right-click-paste-after-upgrade-to-v1-4-3">broken "paste on right-click" feature</a>.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.4.3.dmg">1.4.3</a></h4>
-                    <h5>released on Oct 25, 2013</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">TotalTerminal properly launches TotalTerminalCrashWatcher for reporting crash reports to BinaryAge.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.4.2.dmg">1.4.2</a></h4>
-                    <h5>released on Oct 24, 2013</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                      <li><span class="sticker removed"><b>REMOVED</b></span> <span class="info">Removed support for OS X 10.6 Snow Leopard.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Compatibility with OS X 10.9 Mavericks.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">New custom uninstaller (reused code from <a href="http://totalfinder.binaryage.com">TotalFinder</a>).</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Added support for showing Visor via AppleScript.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">TotalTerminal can switch Terminal.app into <a href="https://github.com/binaryage/totalterminal/issues/3#issuecomment-26988325">UIElement mode</a> dynamically (removes the Dock icon).</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Properly unregisters hot keys when closing visor (fixes <a href="https://github.com/binaryage/totalterminal/issues/53">#53</a>)</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">General cleanups and improvements (ARC, modern-ObjC) of the codebase (thanks to <a href="https://github.com/popavo">popavo</a>).</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">During TotalTerminal launch, existing Terminal windows are auto-closed unless Terminal process is old.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.3.dmg">1.3</a></h4>
-                    <h5>released on Jul 18, 2012</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Compatibility with OS X 10.8 Mountain Lion GM.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Package is signed to make Apple's Gate Keeper happy.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Compatibility with OS X 10.7.5 update.</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed broken crash reports uploader.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.2.3.dmg">1.2.3</a></h4>
-                    <h5>released on May 10, 2012</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Compatibility with OS X 10.7.4 update.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.2.2.dmg">1.2.2</a></h4>
-                    <h5>released on February 22, 2012</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Secondary screens might show a gap between Visor window and top edge of the screen (<a href="https://github.com/binaryage/totalterminal/issues/38">#38</a> introduced in 1.2).</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.2.1.dmg">1.2.1</a></h4>
-                    <h5>released on February 21, 2012</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed sublte timing bug when focus might not be returned to previous app after closing Visor (<a href="https://github.com/binaryage/totalterminal/issues/35">#35</a> introduced in 1.2).</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.2.dmg">1.2</a></h4>
-                    <h5>released on February 20, 2012</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Compatibility with OS X 10.7.3 update.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Compatibility with OS X 10.8 Mountain Lion Preview 1. Visor fading is temporarily no-op - it was crashing the Window Server.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">CMD+OPT+F will temporarily expand Visor to fullscreen and back (<a href="https://github.com/binaryage/totalterminal/issues/24">#24</a>)</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Visor does AutoSliding&trade; - it slides down when Visor is the only terminal window and Terminal.app is activated via CMD+TAB or clicking on Dock icon (<a href="https://github.com/binaryage/totalterminal/issues/34">#34</a>).</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Introduced TotalTerminalVisorForceHide plist tweak (<a href="https://github.com/binaryage/totalterminal/issues/21">#21</a>).</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed colors configuration dialog under Snow Leopard (<a href="https://github.com/binaryage/totalterminal/issues/22">#22</a>).</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">If you pin Visor, switch to another app, return back and close Visor => focus is returned to another app, not the app which was active before you activated Visor.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Closing Visor when having selected other classic terminal window does not restore focus to previous app (<a href="https://github.com/binaryage/totalterminal/issues/26">#26</a>).</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Do not close existing terminal windows on TotalTerminal launch.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Better detection of menu area. Prevents ocassional gap between Visor and top screen edge.</span></li>
-                        <li><span class="sticker removed"><b>REMOVED</b></span> <span class="info">Removed confusing option "Show on Reopen" from Preferences. AutoSliding is the only "right" behavior.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.1.4.dmg">1.1.4</a></h4>
-                    <h5>released on October 4, 2011</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Compatibility with OS X 10.7.2 update.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.1.3.dmg">1.1.3</a></h4>
-                    <h5>released on August 10, 2011</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Finally fixed memory leaks in CrashWatcher (<a href="http://getsatisfaction.com/binaryage/topics/crashreporter_starts_excessive_memory_consumption">issue</a>).</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.1.2.dmg">1.1.2</a></h4>
-                    <h5>released on August 9, 2011</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Added checkbox "Show on top of the Dock" into TotalTerminal Preferences (<a href="https://github.com/binaryage/totalterminal/issues/16">issue</a>).</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Installer was launching TotalTerminal.app with wrong environment. This caused $TMPDIR to be set to non-existing folder (<a href="http://getsatisfaction.com/binaryage/topics/totalterminal_installer_setting_tmpdir_to_nonexisting_pkinstallsandbox">issue</a>).</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed possible crash in CrashWatcher.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Prevents window flicker when hiding Visor, returning focus to previous app and there is other classic Terminal window.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Using 10.6+ APIs to set Visor Window to show on all Spaces if requested. Originally we needed some undocumented calls for Leopard compatibility.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.1.1.dmg">1.1.1</a></h4>
-                    <h5>released on August 6, 2011</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed crash when TotalTerminal tried to return the focus to an application which was not running anymore.</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed random crashes when displays were reconfigured during Visor sliding.</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Visor Window width adapts to screen resolution changes (the bug was introduced in TotalTerminal 1.0).</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">"Show on all Spaces" checkbox was ignored by mistake since 1.0.1 (<a href="https://github.com/binaryage/totalterminal/issues/10">issue</a>).</span></li>
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Visor Window level decreased, so auxiliary windows are visible on top of it (<a href="https://github.com/binaryage/totalterminal/issues/15">issue</a>).</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Visor properly returns focus to classic Terminal windows (<a href="https://github.com/binaryage/totalterminal/issues/13">issue</a>).</span></li>
-                        <li><span class="sticker removed"><b>REMOVED</b></span> <span class="info">Removed Leopard-specific code. We no longer support OS X 10.5.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.1.dmg">1.1</a></h4>
-                    <h5>released on August 3, 2011</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Added German and Chinese localization to crash dialogs.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.0.2.dmg">1.0.2</a></h4>
-                    <h5>released on August 2, 2011</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">TotalTerminal includes <a href="https://github.com/binaryage/crashwatcher">CrashWatcher</a> - this will enable you to send me crash reports easily and helps me to improve TotalTerminal.</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.0.1.dmg">1.0.1</a></h4>
-                    <h5>released on July 31, 2011</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker fixed"><b>FIXED</b></span> <span class="info">Fixed crash when closing Visor window (or exiting shell some other way).</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">After closing Visor window, a new Visor window can be simply created by hitting the key-combo again.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Added a button to Preferences pane to create Visor profile if it does not exist.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Reintroduced the pinning functionality. Pin state is sticky between terminal re-launches. You can redefine the keyboard shortcut in Preferences.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Double-key modifier can be changed by clicking on key images in Preferences.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Massive <a href="https://github.com/binaryage/totalterminal/commit/316f8731d962bb0bff6ec9e7eda352ad5177575e">code refactoring</a>. Hope reordering initialization code solved also few long-term timing bugs.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Redesigned TotalTerminal Preferences pane.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Now using <a href="https://github.com/binaryage/totalterminal/tree/master/totalterminal-plugin/SR">new code for recording keyboard shortcuts</a>. It should be more reliable.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">Fixed window flickering when creating new Visor window.</span></li>
-                        <li><span class="sticker improved"><b>IMPROVED</b></span> <span class="info">TotalTerminal.app can be moved anywhere (~/.totalterminal config is not used anymore)</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="release">
-                <div class="titlebox">
-                    <h4><a href="http://downloads.binaryage.com/TotalTerminal-1.0.dmg">1.0</a></h4>
-                    <h5>released on July 20, 2011</h5>
-                </div>
-                <div class="infobox">
-                    <ul class="changes">
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Lion compatibility.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Standalone installer.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Sparkle updater.</span></li>
-                        <li><span class="sticker new"><b>NEW</b></span> <span class="info">Custom icon modification.</span></li>
-                        <li><span class="sticker removed"><b>REMOVED</b></span> <span class="info">Removed dependency on SIMBL. Now using <a href="https://github.com/binaryage/totalterminal-osax">custom solution</a> similar to TotalFinder.</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </body>
+      #notice { 
+        padding: 4px 10px; 
+        background-color:#FCFFDD;
+        border: 1px solid #ccc;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+      
+      .announce {
+        padding: 2px 6px; 
+        background-color:#FCFFDD;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 8px;
+        margin-left: -11px;
+      }
+      
+    </style>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="changelog.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="notice">
+      Note: You are subscribed to TotalTerminal pre-releases. Want to <a href="">switch to stable?</a>
+    </div>
+    <div id="page" class="changelog">
+    </div>
+    <script>
+      $.get('changelog-beta.txt?x='+((Math.random()+"").substring(2)), function(data) {
+        var changelog = parsePlaintextChangelog(data);
+        var getDownloadLinkForVersion = function(version) {
+          return "http://downloads.binaryage.com/TotalTerminal-"+version+".dmg"
+        };
+        var getReleaseDateText = function(date) {
+          return "released on " + date;
+        };
+        generateChangelogHTML("#page", changelog, getDownloadLinkForVersion, getReleaseDateText);
+      });
+    </script>
+  </body>
 </html>

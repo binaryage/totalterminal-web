@@ -1,23 +1,25 @@
 ---
-layout: product
+layout: product-home
+download: http://downloads.binaryage.com/TotalTerminal-1.5.dmg
+downloadtitle: Download v1.5
 title: TotalTerminal is a system-wide terminal accessible via a hot-key
 product: totalterminal
 product_title: TotalTerminal
 product_subtitle: a system-wide terminal available on a hot-key
+product_icon: /shared/img/icons/totalterminal-256.png
 note: If you like TotalTerminal, check out also <a href="http://totalfinder.binaryage.com">TotalFinder</a>.
-download: http://downloads.binaryage.com/TotalTerminal-1.5.dmg
-downloadtitle: Download v1.5
 downloadsubtitle: Requires OS X 10.8 or higher
+fbsdk: 1
+plusone: 1
+product-fblike: 1
+product-plusone: 1
+product-tweet: 1
 repo: http://github.com/binaryage/totalterminal
 meta_title: TotalTerminal is a system-wide terminal accessible via a hot-key
 meta_keywords: totalterminal,terminal,osx,simbl,binaryage,productivity,software,visor
 meta_description: TotalTerminal is a plugin for Terminal.app which provides Quake-style terminal window available on keyboard shortcut
-meta_image: http://www.binaryage.com/shared/img/icons/totalterminal-256.png
-facebook: 1
-retweet: 1
-buzz: 1
-fbsdk: 1
-#flattr: http://totalterminal.binaryage.com
+meta_image: /shared/img/icons/totalterminal-128.png
+build_tabs: 1
 ogmeta: {
     site_name: "BinaryAge website",
     description: "TotalTerminal is a system-wide terminal for OS X available on a hot-key",
@@ -27,43 +29,84 @@ ogmeta: {
     url: "http://totalterminal.binaryage.com",
     image: "http://www.binaryage.com/shared/img/icons/totalterminal-256.png"
 }
-shots: [{
+---
+
+<!-- shots: [{
     title: "TotalTerminal's Visor window with nice colors!",
     thumb: "/shared/img/totalterminal-mainshot.png",
     full: "/shared/img/totalterminal-mainshot-full.png"
-}]
----
+}] -->
+
+{% contentfor product-buttons %}
+<div class="product-buttons">
+  <div class="button-container">
+    <a href="{{page.download}}" id="o-download-button" class="button product-button-download">
+      <span><i class="fa fa-download fa-lg"></i>{{page.downloadtitle}}</span>
+    </a>
+    <div class="button-note">
+      <i class="fa fa-laptop"></i> Compatible with OS X 10.8, 10.9 and 10.10<br>
+      <a href="#compatibility">Need version for older OS?</a><br>
+      <a href="#changelog">What's new?</a><br>
+    </div>
+  </div>
+</div>
+{% endcontentfor %}
+
+## About
+
+### TotalTerminal is a plugin for Terminal.app. 
+
+It provides persistent Visor Window which slides down when you press a hot-key (remember Quake console?).
+
+<img src="/shared/img/totalterminal-mainshot-full.png">
 
 ## Installation
 
-TotalTerminal is a plugin for Terminal.app. It provides persistent Visor Window which slides down when you press a hot-key. Remember Quake Console?
+### TotalTerminal has an installer
 
-  1. Run installer
-  2. Configure your keyboard trigger by selecting the `Preferences...` -> `TotalTerminal` and edit your keyboard hot-key. By default it is `CTRL+~`
+  1. Download latest <a href="{{page.download}}">TotalTerminal.dmg</a> and run the installer.
+  2. Configure your keyboard trigger by selecting the `Preferences... -> TotalTerminal` and edit your keyboard hot-key. By default it is `CTRL+~`.
 
 Then you can trigger Visor Window with your hot-key from any application to get an instant terminal session.
 
-To hide Visor Window, you can either:
+### To hide Visor window, you can either:
 
   * re-trigger with your key-combo
   * optionally, you can click off the TotalTerminal window
+  * optionally, you can hit ESC (if enabled in TotalTerminal preferences)
 
----
+## Changelog
 
-<span style="color: #a00">For original Visor 2.2 users: TotalTerminal plugin is not injected into Terminal.app automatically like with SIMBL. You have to launch TotalTerminal.app to inject the plugin into Terminal.app. You might want to put TotalTerminal.app into Startup Items.</span>
+<script src="changelog.js" type="text/javascript" charset="utf-8"></script>
 
-## FAQ
+<div class="changelogx">
+  <div id="changelog-content" class="changelog"></div>
+</div>
 
-#### What is the difference between Visor.bundle and TotalTerminal.app?
-> TotalTerminal supersedes Visor. Visor.bundle is a SIMBL plugin which was originally written by Nicholas Jitkoff from [Blacktree](http://blacktree.com). Original Visor was introduced for OS X - Tiger. I have been developing it since Leopard. I decided to rename it to TotalTerminal with OS X Lion release. TotalTerminal has installer, Sparkle updater and does not depend on [SIMBL](http://www.culater.net/software/SIMBL/SIMBL.php). In the future it will get more bug fixes and hopefully some new features.
->
-> The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)
+<script type="text/coffeescript" charset="utf-8">
+  nonce = -> (Math.random() + "").substring(2)
+  source = "changelog-beta.txt"
+  hashToSelector = (h) -> h.replace /\./g, "\\." # http://stackoverflow.com/a/9930611/84283
+  
+  $.get "#{source}?x=#{nonce()}", (data) ->
+    changelog = parsePlaintextChangelog(data)
 
-#### Why did you rename it?
-> There are several reasons. First, Visor Window is also a feature of [TotalFinder](http://totalfinder.binaryage.com), my other application plugin. This was causing confusion. Second, TotalFinder and TotalTerminal make up nicer branding. It is immediately obvious they are related and TotalTerminal has something to do with Terminal.app. Also searching for TotalTerminal through social media is easier for me. Visor is a general term.
+    getDownloadLinkForVersion = (version) -> "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
+    getReleaseDateText = (date) -> "released on " + date
+    generateChangelogHTML "#changelog-content", changelog, getDownloadLinkForVersion, getReleaseDateText
 
-#### Do I need to uninstall Visor.bundle prior TotalTerminal installation?
-> Not necessarily. TotalTerminal installer will remove it automatically. Visor and TotalTerminal conflict so you cannot have them running both.
+    # http://stackoverflow.com/a/13952352/84283
+    #if window.location.hash
+    #  $(document.body).animate
+    #    scrollTop: $(hashToSelector(window.location.hash)).offset().top
+    #  , 2000
+    
+</script>
+
+## Compatibility
+
+#### Does TotalTerminal work on OS X 10.10 (Yosemite)?
+> Yes, since 1.5.
 
 #### Does TotalTerminal work on OS X 10.9 (Mavericks)?
 > Yes, since 1.4.
@@ -72,22 +115,24 @@ To hide Visor Window, you can either:
 > Yes, since 1.2.
 
 #### Does TotalTerminal work on OS X 10.7 (Lion)?
-> Yes, since 1.0.
+> No, last compatible version is 1.4.11.
 
 #### Does TotalTerminal work on OS X 10.6 (Snow Leopard)?
-> Yes, historical versions 1.0 up to 1.3.x.
+> No, last compatible version is 1.3.
 
 #### Does TotalTerminal work on OS X 10.5 (Leopard)?
-> Version 1.0 should work under Leopard.
+> No, last compatible version is 1.0.
 
-#### Does TotalTerminal work on OS X 10.4 (Tiger)?
-> Tiger was supported by early Visor (pre 1.5).
 
-#### Where I can get older versions?
-> Prior 1.0, TotalTerminal was known as [Visor](http://visor.binaryage.com). It was brought to you by Alcor ([Blacktree](http://blacktree.com)), kudos man!
+## FAQ
 
 #### How do I uninstall TotalTerminal?
 > You may use Status Menu Icon and select `Uninstall TotalTerminal`. Alternatively you may [download TotalTerminal DMG](#changelog) again and use `TotalTerminal Uninstaller` which is present there.
+
+#### What is the difference between Visor.bundle and TotalTerminal.app?
+> TotalTerminal supersedes Visor. Visor.bundle is a SIMBL plugin which was originally written by Nicholas Jitkoff from [Blacktree](http://blacktree.com). Original Visor was introduced for OS X - Tiger. I have been developing it since Leopard. I decided to rename it to TotalTerminal with OS X Lion release. TotalTerminal has installer, Sparkle updater and does not depend on [SIMBL](http://www.culater.net/software/SIMBL/SIMBL.php). In the future it will get more bug fixes and hopefully some new features.
+>
+> The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)
 
 #### I see two Terminal.app icons in the Dock. How should I get rid of it?
 
@@ -104,7 +149,7 @@ To hide Visor Window, you can either:
 
 #### How to remove Terminal from App Switcher (CMD+TAB)?
 
-Please folow [this thread](https://github.com/binaryage/totalterminal/issues/3) to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app's Info.plist - this would break code signature from Apple.
+> Please folow [this thread](https://github.com/binaryage/totalterminal/issues/3) to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app's Info.plist - this would break code signature from Apple.
 
 #### Where are TotalTerminal settings stored?
 > TotalTerminal settings are stored with Terminal.app settings. You can `open ~/Library/Preferences/com.apple.Terminal.plist` and tweak the values (better to do this when Terminal.app is not running).
@@ -137,25 +182,12 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
 #### Do I need to install CopyOnSelect SIMBL with TotalTerminal?
 > No, CopyOnSelect is integrated into TotalTerminal 1.0 and later. It is a configurable option in TotalTerminal Preferences (disabled by default).
 
-## Changelog
-
-<div class="changelogx"></div>
-
-<script type="text/javascript" charset="utf-8">
-    $(function() {
-        $('.changelogx').load('changelog-beta.html?x='+((Math.random()+"").substring(2))+' #page');
-    });
-
-    function showBetaHint() {
-        $('.betahint').toggle();
-    }
-</script>
-
 ## Special Guest
 
 ### Ben Stiglitz about Terminal.app
 
-<div>Ben is the author of Terminal.app. Kudos!</div>
+##### Ben is the author of Terminal.app. Kudos!
+
 <embed src='http://rubyconf2008.confreaks.com/player.swf' height='260' width='640' allowscriptaccess='always' allowfullscreen='true' flashvars='file=http%3A%2F%2Frubyconf2008.confreaks.com%2Fvideos%2Fterminalapp-small.mp4&image=images%2Fterminalapp-preview.jpg&plugins=viral-1'/>
 
 [darwin]: http://github.com/darwin
