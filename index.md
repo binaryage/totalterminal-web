@@ -2,6 +2,7 @@
 layout: product-home
 download: http://downloads.binaryage.com/TotalTerminal-1.5.dmg
 downloadtitle: Download v1.5
+latest: 1.5
 title: TotalTerminal is a system-wide terminal accessible via a hot-key
 product: totalterminal
 product_title: TotalTerminal
@@ -29,16 +30,46 @@ ogmeta: {
     url: "http://totalterminal.binaryage.com",
     image: "http://www.binaryage.com/shared/img/icons/totalterminal-256.png"
 }
+oses: [{
+  version: "10.10",
+  label: "Yosemite",
+  logo: "logo-yosemite.png",
+  wiki: "OS_X_Yosemite",
+  note: "install <a href=\"#changelog\">the latest version</a>"
+},{
+  version: "10.9",
+  label: "Mavericks",
+  logo: "logo-mavericks.png",
+  wiki: "OS_X_Mavericks",
+  note: "install <a href=\"#changelog\">the latest version</a>"
+},{
+  version: "10.8",
+  label: "Mountain Lion",
+  logo: "logo-mountain-lion.png",
+  wiki: "OS_X_Mountain_Lion",
+  note: "install <a href=\"#changelog\">the latest version</a>"
+},{
+  version: "10.7",
+  label: "Lion",
+  logo: "logo-lion.png",
+  wiki: "OS_X_Lion",
+  note: "install <a href=\"#1.4.11\">version 1.4.11</a>"
+},{
+  version: "10.6",
+  label: "Snow Leopard",
+  logo: "logo-snow-leopard.png",
+  wiki: "OS_X_Snow_Leopard",
+  note: "install <a href=\"#1.3\">version 1.3</a>"
+}]
 ---
-
-<!-- shots: [{
-    title: "TotalTerminal's Visor window with nice colors!",
-    thumb: "/shared/img/totalterminal-mainshot.png",
-    full: "/shared/img/totalterminal-mainshot-full.png"
-}] -->
 
 {% contentfor product-buttons %}
 <div class="product-buttons">
+  <div class="button-container">
+    <div class="cross-promo">
+      <i class="fa fa-thumbs-o-up fa-lg"></i> Do you like TotalTerminal?<br><a href="http://totalfinder.binaryage.com">Check out also TotalFinder</a>.
+    </div>
+  </div>
   <div class="button-container">
     <a href="{{page.download}}" id="o-download-button" class="button product-button-download">
       <span><i class="fa fa-download fa-lg"></i>{{page.downloadtitle}}</span>
@@ -58,13 +89,13 @@ ogmeta: {
 
 It provides persistent Visor Window which slides down when you press a hot-key (remember Quake console?).
 
-<img src="/shared/img/totalterminal-mainshot-full.png">
+<img src="/shared/img/totalterminal-mainshot-full.png" class="doc-main-image">
 
 ## Installation
 
 ### TotalTerminal has an installer
 
-  1. Download latest <a href="{{page.download}}">TotalTerminal.dmg</a> and run the installer.
+  1. Download <a href="{{page.download}}">latest TotalTerminal.dmg</a> and run the installer.
   2. Configure your keyboard trigger by selecting the `Preferences... -> TotalTerminal` and edit your keyboard hot-key. By default it is `CTRL+~`.
 
 Then you can trigger Visor Window with your hot-key from any application to get an instant terminal session.
@@ -77,7 +108,7 @@ Then you can trigger Visor Window with your hot-key from any application to get 
 
 ## Changelog
 
-<script src="changelog.js" type="text/javascript" charset="utf-8"></script>
+<script src="shared/js/changelog.js" type="text/javascript" charset="utf-8"></script>
 
 <div class="changelogx">
   <div id="changelog-content" class="changelog"></div>
@@ -105,24 +136,23 @@ Then you can trigger Visor Window with your hot-key from any application to get 
 
 ## Compatibility
 
-#### Does TotalTerminal work on OS X 10.10 (Yosemite)?
-> Yes, since 1.5.
+{% contentfor inline_styles %}
+.custom-os-box { margin-left:20px; font-size:16px; clear:both; margin-bottom:20px; line-height:32px; }
+.custom-os-box img { height:32px; float:left; margin-right:12px; }
+.custom-os-box .title { color:#999; font-weight:bold; display:inline-block; width: 220px }
+.custom-os-box .title a { color:#999; }
+.custom-os-box .note { color:#999; font-weight:bold; display:inline-block }
+{% endcontentfor %}
 
-#### Does TotalTerminal work on OS X 10.9 (Mavericks)?
-> Yes, since 1.4.
+{% for item in page.oses %}
+<div class="custom-os-box">
+  <img src="shared/img/os/{{item.logo}}">
+  <div class="title"><a href="http://en.wikipedia.org/wiki/{{item.wiki}}">OS X {{item.version}} ({{item.label}})</a></div><div class="note"> =&gt; {{item.note}}</div>
+  {% if item.more %}<div class="more">{{item.more}}</div>{% endif %}
+</div>
+{% endfor %}
 
-#### Does TotalTerminal work on OS X 10.8 (Mountain Lion)?
-> Yes, since 1.2.
-
-#### Does TotalTerminal work on OS X 10.7 (Lion)?
-> No, last compatible version is 1.4.11.
-
-#### Does TotalTerminal work on OS X 10.6 (Snow Leopard)?
-> No, last compatible version is 1.3.
-
-#### Does TotalTerminal work on OS X 10.5 (Leopard)?
-> No, last compatible version is 1.0.
-
+For older versions please search the internet for <a href="http://www.blacktree.com">Visor by Blacktree</a>.
 
 ## FAQ
 
