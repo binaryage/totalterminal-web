@@ -219,14 +219,3 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
 ##### Ben is the author of Terminal.app. Kudos!
 
 <embed src='http://rubyconf2008.confreaks.com/player.swf' height='260' width='640' allowscriptaccess='always' allowfullscreen='true' flashvars='file=http%3A%2F%2Frubyconf2008.confreaks.com%2Fvideos%2Fterminalapp-small.mp4&image=images%2Fterminalapp-preview.jpg&plugins=viral-1'/>
-
-[darwin]: http://github.com/darwin
-[torsten]: http://github.com/torsten
-[pumpkin]: http://github.com/pumpkin
-[blinks]: http://github.com/blinks
-[cglee]: http://github.com/cglee
-[kleinman]: http://github.com/kleinman
-[genki]: http://github.com/genki
-[ciaran]: http://github.com/ciaran
-[evanphx]: http://github.com/evanphx
-[contribute]: http://github.com/binaryage/totalterminal
