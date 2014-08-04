@@ -1,10 +1,10 @@
 1.5 - July 24, 2014
-  + Compatibility with OS X 10.10 (Yosemite).
+  + Compatibility with OS X 10.10. [Yosemite]
   * Double-tap activation via modifier keys reimplemented.
   * Old <a href="https://code.google.com/p/shortcutrecorder/">ShortcutRecorder</a> code replaced with <a href="https://github.com/shpakovski/MASShortcut">MASShortcut</a> library.
   * Sharing more code with TotalFinder for easier maintenance.
   * Not forcing <a href="https://github.com/binaryage/totalterminal/issues/99">Terminal icon in the Dock after launch</a>.
-  - Removed support for OS X 10.7 (Lion).
+  - Removed support for OS X 10.7. [Lion]
 
 1.4.11 - February 12, 2014
   ! Installer does not <a href="http://discuss.binaryage.com/t/totalterminal-update-overrides-script-name-breaks-webservers/897">leak environmental variables to newly launched Terminal.app</a>.

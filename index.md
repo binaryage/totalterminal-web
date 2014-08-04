@@ -117,7 +117,6 @@ Then you can trigger Visor Window with your hot-key from any application to get 
 <script type="text/coffeescript" charset="utf-8">
   nonce = -> (Math.random() + "").substring(2)
   source = "changelog-beta.txt"
-  hashToSelector = (h) -> h.replace /\./g, "\\." # http://stackoverflow.com/a/9930611/84283
   
   $.get "#{source}?x=#{nonce()}", (data) ->
     changelog = parsePlaintextChangelog(data)
@@ -125,13 +124,48 @@ Then you can trigger Visor Window with your hot-key from any application to get 
     getDownloadLinkForVersion = (version) -> "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
     getReleaseDateText = (date) -> "released on " + date
     generateChangelogHTML "#changelog-content", changelog, getDownloadLinkForVersion, getReleaseDateText
+</script>
 
-    # http://stackoverflow.com/a/13952352/84283
-    #if window.location.hash
-    #  $(document.body).animate
-    #    scrollTop: $(hashToSelector(window.location.hash)).offset().top
-    #  , 2000
+<script type="text/coffeescript" charset="utf-8">
+  tabToSelect = "changelog"
+
+  hashToSelector = (h) -> h.replace /\./g, "\\." # http://stackoverflow.com/a/9930611/84283
+  
+  isVersion = (s) ->
+    s.match /[0-9.]+/
     
+  selectTab = (name) ->
+    tabs = $(".product-tabs")
+    tab = tabs.find("a[href=\"##{name}\"]")
+    console.log("tab", tab, tab.length)
+    return unless tab.length>0
+    index = tab.parent().index()
+    console.log "selecting tab ##{index}"
+    tabs.data("ignoreActivate", true)
+    tabs.tabs "option", "active", index
+    
+  selectVersion = (version) ->
+    console.log "selecting #{version}"
+    selectTab(tabToSelect)
+    # http://stackoverflow.com/a/13952352/84283
+    $release = $(hashToSelector("##{version}"))
+    $release.addClass('highlighted')
+    $(document.body).animate
+      scrollTop: $release.offset().top - 10 # 10px margin
+      , 1000
+    
+  $(window).on "hashchange", ->
+    version = location.hash[1..-1]
+    return unless isVersion version
+    selectVersion version
+  
+  recogniseVersionRef = ->
+    version = location.hash[1..-1]
+    return unless isVersion version
+    selectVersion version
+  
+  $(recogniseVersionRef)
+  
 </script>
 
 ## Compatibility
