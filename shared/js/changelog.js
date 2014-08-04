@@ -77,7 +77,7 @@
         $separator = $("<div class=\"separator\"/>");
       }
       i--;
-      $release = $("<div class=\"release\"/>").attr('id', release.version);
+      $release = $("<div class=\"release\"/>").attr('id', "v" + release.version);
       $titlebox = $("<div class=\"titlebox\"/>");
       $version = $("<h4/>");
       $a = $("<a>" + release.version + "</a>").attr("href", getDownloadLinkForVersion(release.version));
