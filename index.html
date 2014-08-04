@@ -116,7 +116,7 @@
                   </a>
                   <div class="button-note">
                     <i class="fa fa-laptop"></i> Compatible with OS X 10.8, 10.9 and 10.10<br/>
-                    <a href="#compatibility">Need version for older OS?</a><br/>
+                    <a href="#compatibility">Looking for an older version?</a><br/>
                     <a href="#changelog">What's new?</a><br/>
                   </div>
                 </div>
@@ -157,7 +157,7 @@
             <div id="changelog-content" class="changelog"></div>
           </div>
           <script type="text/javascript" charset="utf-8">(function(){var n,t;n=function(){return(Math.random()+"").substring(2)};t="changelog-beta.txt";$.get(""+t+"?x="+n(),function(n){var t,e,a;t=parsePlaintextChangelog(n);e=function(n){return"http://downloads.binaryage.com/TotalTerminal-"+n+".dmg"};a=function(n){return"released on "+n};return generateChangelogHTML("#changelog-content",t,e,a)})}).call(this)</script>
-          <script type="text/javascript" charset="utf-8">(function(){var n,t,e,o,r,a;a="changelog";n=function(n){return n.replace(/\./g,"\\.")};t=function(n){return n.match(/[0-9.]+/)};o=function(n){var t,e,o;o=$(".product-tabs");e=o.find('a[href="#'+n+'"]');console.log("tab",e,e.length);if(!(e.length>0)){return}t=e.parent().index();console.log("selecting tab #"+t);o.data("ignoreActivate",true);return o.tabs("option","active",t)};r=function(t){var e;console.log("selecting "+t);o(a);e=$(n("#"+t));e.addClass("highlighted");return $(document.body).animate({scrollTop:e.offset().top-10},1e3)};$(window).on("hashchange",function(){var n;n=location.hash.slice(1);if(!t(n)){return}return r(n)});e=function(){var n;n=location.hash.slice(1);if(!t(n)){return}return r(n)};$(e)}).call(this)</script>
+          <script type="text/javascript" charset="utf-8">(function(){var n,e,t,o,a,r;r="changelog";n=function(n){return n.replace(/\./g,"\\.")};e=function(n){return n.match(/[0-9.]+/)};o=function(n){var e,t,o;o=$(".product-tabs");t=o.find('a[href="#'+n+'"]');console.log("tab",t,t.length);if(!(t.length>0)){return}e=t.parent().index();console.log("selecting tab #"+e);o.data("ignoreActivate",true);return o.tabs("option","active",e)};a=function(e){var t,a;console.log("selecting "+e);o(r);t=$(n("#"+e));a=$(".changelog .release").removeClass("highlighted");t.addClass("highlighted");return $(document.body).animate({scrollTop:t.offset().top-10},1e3)};$(window).on("hashchange",function(){var n;n=location.hash.slice(1);if(!e(n)){return}return a(n)});t=function(){var n;n=location.hash.slice(1);if(!e(n)){return}return a(n)};$(t)}).call(this)</script>
           <h2>Compatibility</h2>
           <div class="custom-os-box">
             <img src="http://static.binaryage.com/f7a1114c_shared_img_os_logo-yosemite.png"/>
