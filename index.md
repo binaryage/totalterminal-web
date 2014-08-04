@@ -124,6 +124,8 @@ Then you can trigger Visor Window with your hot-key from any application to get 
     getDownloadLinkForVersion = (version) -> "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
     getReleaseDateText = (date) -> "released on " + date
     generateChangelogHTML "#changelog-content", changelog, getDownloadLinkForVersion, getReleaseDateText
+    $(window).trigger "changelog-rendered"
+    
 </script>
 
 ## Compatibility
