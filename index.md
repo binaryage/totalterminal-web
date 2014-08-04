@@ -76,7 +76,7 @@ oses: [{
     </a>
     <div class="button-note">
       <i class="fa fa-laptop"></i> Compatible with OS X 10.8, 10.9 and 10.10<br>
-      <a href="#compatibility">Need version for older OS?</a><br>
+      <a href="#compatibility">Looking for an older version?</a><br>
       <a href="#changelog">What's new?</a><br>
     </div>
   </div>
@@ -149,6 +149,7 @@ Then you can trigger Visor Window with your hot-key from any application to get 
     selectTab(tabToSelect)
     # http://stackoverflow.com/a/13952352/84283
     $release = $(hashToSelector("##{version}"))
+    $releases = $(".changelog .release").removeClass('highlighted')
     $release.addClass('highlighted')
     $(document.body).animate
       scrollTop: $release.offset().top - 10 # 10px margin
