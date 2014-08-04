@@ -63,13 +63,24 @@
         margin-left: -11px;
       }
       
+      .switch-stable {
+        display: block;
+        max-width: 420px;
+        margin: 8px 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px #999;
+      }
+      
     </style>
     <script src="http://code.jquery.com/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="shared/js/changelog.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
     <div id="notice">
-      Note: You are subscribed to TotalTerminal pre-releases. Want to <a href="">switch to stable?</a>
+      Note: You are subscribed to TotalTerminal pre-releases. Want to <a href="javascript:showStable()">switch to stable?</a>
+    </div>
+    <div id="stable-how-to" style="display:none">
+      <img src="/images/switch-stable.png" class="switch-stable">
     </div>
     <div id="page" class="changelog">
     </div>
@@ -84,6 +95,10 @@
         };
         generateChangelogHTML("#page", changelog, getDownloadLinkForVersion, getReleaseDateText);
       });
+      
+      showStable = function() {
+        $('#stable-how-to').toggle();
+      }
     </script>
   </body>
 </html>

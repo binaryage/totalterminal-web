@@ -67,12 +67,15 @@
   };
 
   this.generateChangelogHTML = function(el, changelog, getDownloadLinkForVersion, getReleaseDateText) {
-    var $a, $b, $changes, $date, $info, $infobox, $li, $release, $root, $sticker, $titlebox, $version, change, i, j, release, _results;
+    var $a, $b, $changes, $date, $info, $infobox, $li, $release, $root, $separator, $sticker, $titlebox, $version, change, i, j, release, _results;
     $root = $(el);
     i = changelog.length - 1;
     _results = [];
     while (i >= 0) {
       release = changelog[i];
+      if (i !== changelog.length - 1) {
+        $separator = $("<div class=\"separator\"/>");
+      }
       i--;
       $release = $("<div class=\"release\"/>").attr('id', release.version);
       $titlebox = $("<div class=\"titlebox\"/>");
@@ -115,7 +118,7 @@
       }
       $infobox.append($changes);
       $release.append($infobox);
-      _results.push($root.prepend($release));
+      _results.push($root.prepend($release, $separator));
     }
     return _results;
   };
