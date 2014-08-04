@@ -8,8 +8,6 @@ product: totalterminal
 product_title: TotalTerminal
 product_subtitle: a system-wide terminal available on a hot-key
 product_icon: /shared/img/icons/totalterminal-256.png
-note: If you like TotalTerminal, check out also <a href="http://totalfinder.binaryage.com">TotalFinder</a>.
-downloadsubtitle: Requires OS X 10.8 or higher
 fbsdk: 1
 plusone: 1
 product-fblike: 1
@@ -67,7 +65,7 @@ oses: [{
 <div class="product-buttons">
   <div class="button-container">
     <div class="cross-promo">
-      <i class="fa fa-thumbs-o-up fa-lg"></i> Do you like TotalTerminal?<br><a href="http://totalfinder.binaryage.com">Check out also TotalFinder</a>.
+      <i class="fa fa-thumbs-o-up fa-lg"></i><div>Do you like TotalTerminal?<br><a href="http://totalfinder.binaryage.com">Check out also TotalFinder</a></div>.
     </div>
   </div>
   <div class="button-container">
