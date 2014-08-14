@@ -104,28 +104,6 @@ Then you can trigger Visor Window with your hot-key from any application to get 
   * optionally, you can click off the TotalTerminal window
   * optionally, you can hit ESC (if enabled in TotalTerminal preferences)
 
-## Changelog
-
-<script src="shared/js/changelog.js" type="text/javascript" charset="utf-8"></script>
-
-<div class="changelogx">
-  <div id="changelog-content" class="changelog"></div>
-</div>
-
-<script type="text/coffeescript" charset="utf-8">
-  nonce = -> (Math.random() + "").substring(2)
-  source = "changelog-beta.txt"
-  
-  $.get "#{source}?x=#{nonce()}", (data) ->
-    changelog = parsePlaintextChangelog(data)
-
-    getDownloadLinkForVersion = (version) -> "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
-    getReleaseDateText = (date) -> "released on " + date
-    generateChangelogHTML "#changelog-content", changelog, getDownloadLinkForVersion, getReleaseDateText
-    $(window).trigger "changelog-rendered"
-    
-</script>
-
 ## Compatibility
 
 {% contentfor inline_styles %}
@@ -203,3 +181,26 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
 
 #### Do I need to install CopyOnSelect SIMBL with TotalTerminal?
 > No, CopyOnSelect is integrated into TotalTerminal 1.0 and later. It is a configurable option in TotalTerminal Preferences (disabled by default).
+
+## Changelog
+
+<script src="shared/js/changelog.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="changelogx">
+  <div id="changelog-content" class="changelog"></div>
+</div>
+
+<script type="text/coffeescript" charset="utf-8">
+  nonce = -> (Math.random() + "").substring(2)
+  source = "changelog-beta.txt"
+  
+  $.get "#{source}?x=#{nonce()}", (data) ->
+    changelog = parsePlaintextChangelog(data)
+
+    getDownloadLinkForVersion = (version) -> "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
+    getReleaseDateText = (date) -> "released on " + date
+    generateChangelogHTML "#changelog-content", changelog, getDownloadLinkForVersion, getReleaseDateText
+    $(window).trigger "changelog-rendered"
+    
+</script>
+
