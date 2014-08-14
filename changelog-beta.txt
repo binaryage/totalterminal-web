@@ -1,3 +1,12 @@
+1.5.2 - July 24, 2014
+  * Improved compatibility with OS X 10.10. [Yosemite]
+  * Double-tap activation via modifier keys works more reliably (double tap is cancelled if other gets key pressed in between).
+  * Status menu item is always displayed when in "run as background app" (<a href="https://github.com/binaryage/totalterminal/issues/97">discussion</a>).
+  * Preferenes Window is raised above Visor window (easier to access when Visor is down).
+  * More robust injection code.
+  ! Fixed applescript interface (was broken in 1.5 release).
+  - Removed support animated backgrounds (I don't want to maintain that code).
+
 1.5 - July 24, 2014
   + Compatibility with OS X 10.10. [Yosemite]
   * Double-tap activation via modifier keys reimplemented.
