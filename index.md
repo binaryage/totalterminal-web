@@ -203,11 +203,3 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
 
 #### Do I need to install CopyOnSelect SIMBL with TotalTerminal?
 > No, CopyOnSelect is integrated into TotalTerminal 1.0 and later. It is a configurable option in TotalTerminal Preferences (disabled by default).
-
-## Special Guest
-
-### Ben Stiglitz about Terminal.app
-
-##### Ben is the author of Terminal.app. Kudos!
-
-<embed src='http://rubyconf2008.confreaks.com/player.swf' height='260' width='640' allowscriptaccess='always' allowfullscreen='true' flashvars='file=http%3A%2F%2Frubyconf2008.confreaks.com%2Fvideos%2Fterminalapp-small.mp4&image=images%2Fterminalapp-preview.jpg&plugins=viral-1'/>
