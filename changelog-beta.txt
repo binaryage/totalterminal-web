@@ -4,6 +4,7 @@
   * Status menu item is always displayed when in "run as background app" (<a href="https://github.com/binaryage/totalterminal/issues/97">discussion</a>).
   * Preferenes Window is raised above Visor window (easier to access when Visor is down).
   * More robust injection code.
+  * Improved sliding animation code (works well on external displays under Yosemite). [Yosemite]
   ! Fixed applescript interface (was broken in 1.5 release).
   - Removed support animated backgrounds (I don't want to maintain that code).
 
