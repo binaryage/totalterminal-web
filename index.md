@@ -33,19 +33,19 @@ oses: [{
   label: "Yosemite",
   logo: "logo-yosemite.png",
   wiki: "OS_X_Yosemite",
-  note: "install <a href=\"#changelog\">the latest version</a>"
+  note: "install <a href=\"#latest\">the latest version</a>"
 },{
   version: "10.9",
   label: "Mavericks",
   logo: "logo-mavericks.png",
   wiki: "OS_X_Mavericks",
-  note: "install <a href=\"#changelog\">the latest version</a>"
+  note: "install <a href=\"#latest\">the latest version</a>"
 },{
   version: "10.8",
   label: "Mountain Lion",
   logo: "logo-mountain-lion.png",
   wiki: "OS_X_Mountain_Lion",
-  note: "install <a href=\"#changelog\">the latest version</a>"
+  note: "install <a href=\"#latest\">the latest version</a>"
 },{
   version: "10.7",
   label: "Lion",
