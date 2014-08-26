@@ -1,3 +1,8 @@
+1.5.3 - August 26, 2014
+  ! Fixed <a href="http://discuss.binaryage.com/t/double-tap-activator-not-working-in-yosemite-dp5/2392">broken double-tap activation via modifier keys</a> (caused by a typo introduced in 1.5.2).
+  * Do not auto-slide when preferences panel is visible.
+  * It is newly possible to assign <a href="http://discuss.binaryage.com/t/cant-change-activation-key-to-control-esc/2417">CTRL+ESC, CMD+ESC and similar keyboard shortcuts</a>.
+
 1.5.2 - August 14, 2014
   * Improved compatibility with OS X 10.10. [Yosemite]
   * Double-tap activation via modifier keys works more reliably (double tap is ignored if other key is pressed in between).
