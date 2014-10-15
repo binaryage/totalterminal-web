@@ -1,10 +1,10 @@
 1.5.4 - October 15, 2014
-  + It is newly possible to resize active Terminal window using hotkeys CMD+OPT+<arrow> (see the Window menu).
-  * Sliding is implemented via animation groups instead of active loop (sliding is smooth even if you press hot-key during animation to reverse it).
-  * When activating Visor via a hot-key, keyboard focus is transferred to Terminal window as the first operation (this can help prevent rare problem of missing a quick keystroke after activating the hot-key).
-  * <a href="https://github.com/binaryage/totalterminal/issues/79">Prevent pulsing/flashing of scrollbar's knob</a> after sliding the visor window.
-  * Keyboard shortcut recording has relaxed the conflicting-shortcut-dialog. User has newly an option to set conflicting shortcut anyway.
-  ! Additionally global keyboard shortucs which <a href="https://github.com/shpakovski/MASShortcut/commit/0633545a4666d969dfbb860e540eb3b008893651">are disabled are no longer treated as conflicting shortcuts by TotalTerminal</a>.
+  + It is newly possible to resize active Terminal window using hotkeys CMD+OPT+ARROWS (see the Window menu).
+  * Visor sliding is newly implemented via animation groups instead of using an active loop (sliding is smooth even if you press hot-key during animation to reverse it).
+  * When activating the visor window via a hot-key, the keyboard focus is transferred to Terminal.app as the first operation (this can help prevent rare problem of missing a quick keystroke after activating the hot-key).
+  * <a href="https://github.com/binaryage/totalterminal/issues/79">Prevent pulsing/flashing of scrollbars</a> after sliding the visor window.
+  * Keyboard shortcut recording has relaxed conflicts detection. User is warned but has newly an option to set conflicting shortcut anyway.
+  ! Additionally global keyboard shortucs which are disabled <a href="https://github.com/shpakovski/MASShortcut/commit/0633545a4666d969dfbb860e540eb3b008893651">are no longer treated as conflicting shortcuts by TotalTerminal</a>.
 
 1.5.3 - August 26, 2014
   ! Fixed <a href="http://discuss.binaryage.com/t/double-tap-activator-not-working-in-yosemite-dp5/2392">broken double-tap activation via modifier keys</a> (caused by a typo introduced in 1.5.2).
