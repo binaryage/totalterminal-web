@@ -1,7 +1,7 @@
 ---
 layout: product-home
-download: http://downloads.binaryage.com/TotalTerminal-1.5.3.dmg
-downloadtitle: Download v1.5.3
+download: http://downloads.binaryage.com/TotalTerminal-1.5.4.dmg
+downloadtitle: Download v1.5.4
 title: TotalTerminal is a system-wide terminal accessible via a hot-key
 product: totalterminal
 product_title: TotalTerminal
