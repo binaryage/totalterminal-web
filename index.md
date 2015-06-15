@@ -148,7 +148,7 @@ For older versions please search the internet for <a href="http://www.blacktree.
 
 #### How to remove Terminal from App Switcher (CMD+TAB)?
 
-> Please folow [this thread](https://github.com/binaryage/totalterminal/issues/3) to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app's Info.plist - this would break code signature from Apple.
+> Please follow [this thread](https://github.com/binaryage/totalterminal/issues/3) to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app's Info.plist - this would break code signature from Apple.
 
 #### Where are TotalTerminal settings stored?
 > TotalTerminal settings are stored with Terminal.app settings. You can `open ~/Library/Preferences/com.apple.Terminal.plist` and tweak the values (better to do this when Terminal.app is not running).
