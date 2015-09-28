@@ -1,7 +1,7 @@
 ---
 layout: product-home
-download: http://downloads.binaryage.com/TotalTerminal-1.5.4.dmg
-downloadtitle: Download v1.5.4
+download: http://downloads.binaryage.com/TotalTerminal-1.6.dmg
+downloadtitle: Download v1.6
 title: TotalTerminal is a system-wide terminal accessible via a hot-key
 product: totalterminal
 product_title: TotalTerminal
@@ -28,6 +28,12 @@ ogmeta: {
     image: "http://www.binaryage.com/shared/img/icons/totalterminal-256.png"
 }
 oses: [{
+  version: "10.11",
+  label: "El Capitan",
+  logo: "logo-el-capitan.png",
+  wiki: "OS_X_El_Capitan",
+  note: "install <a href=\"#latest\">the latest version</a>, but <a href=\"/#sip\" class=\"red\">needs a system tweak</a>"
+},{
   version: "10.10",
   label: "Yosemite",
   logo: "logo-yosemite.png",
@@ -44,7 +50,7 @@ oses: [{
   label: "Mountain Lion",
   logo: "logo-mountain-lion.png",
   wiki: "OS_X_Mountain_Lion",
-  note: "install <a href=\"#latest\">the latest version</a>"
+  note: "install <a href=\"#1.5.4\">version 1.5.4</a>"
 },{
   version: "10.7",
   label: "Lion",
@@ -72,7 +78,9 @@ oses: [{
       <span><i class="fa fa-download fa-lg"></i>{{page.downloadtitle}}</span>
     </a>
     <div class="button-note">
-      <i class="fa fa-laptop"></i> Compatible with OS X 10.8, 10.9 and 10.10<br>
+      <i class="fa fa-check-circle"></i> Compatible with OS X 10.8, 10.9 and 10.10<br>
+      <div class="exclamation"><i class="fa fa-exclamation-circle"></i> <a href="/#sip">Not compatible with OS X 10.11</a></div><br>
+      <br>
       <a href="#compatibility">Looking for an older version?</a><br>
       <a href="#changelog">What's new?</a><br>
     </div>
@@ -106,18 +114,18 @@ Then you can trigger Visor Window with your hot-key from any application to get 
 ## Compatibility
 
 {% contentfor inline_styles %}
-.custom-os-box { margin-left:20px; font-size:16px; clear:both; margin-bottom:20px; line-height:32px; }
+.custom-os-box { margin-left:20px; font-size:14px; clear:both; margin-bottom:20px; line-height:32px; }
 .custom-os-box img { height:32px; float:left; margin-right:12px; }
-.custom-os-box .title { color:#999; font-weight:bold; display:inline-block; width: 220px }
-.custom-os-box .title a { color:#999; }
-.custom-os-box .note { color:#999; font-weight:bold; display:inline-block }
+.custom-os-box .title { color:#666; font-weight:bold; display:inline-block; width: 220px }
+.custom-os-box .title a { color:#666; }
+.custom-os-box .note { color:#666; display:inline-block }
+.custom-os-box a {font-weight: bold}
 {% endcontentfor %}
 
 {% for item in page.oses %}
 <div class="custom-os-box">
   <img src="shared/img/os/{{item.logo}}">
   <div class="title"><a href="http://en.wikipedia.org/wiki/{{item.wiki}}">OS X {{item.version}} ({{item.label}})</a></div><div class="note"> =&gt; {{item.note}}</div>
-  {% if item.more %}<div class="more">{{item.more}}</div>{% endif %}
 </div>
 {% endfor %}
 
@@ -125,8 +133,15 @@ For older versions please search the internet for <a href="http://www.blacktree.
 
 ## FAQ
 
+#### Does it run under OS X 10.11 (El Capitan)?
+>  Not under default configuration. It requires a system tweak, [read about it here](/#sip).
+
 #### How do I uninstall TotalTerminal?
 > You may use Status Menu Icon and select `Uninstall TotalTerminal`. Alternatively you may [download TotalTerminal DMG](#changelog) again and use `TotalTerminal Uninstaller` which is present there.
+>
+> Alternatively you can launch this command in Terminal.app:
+> `open "/Library/ScriptingAdditions/TotalTerminal.osax/Contents/Resources/TotalTerminal.bundle/Contents/Resources/TotalTerminal Uninstaller.app"`
+
 
 #### What is the difference between Visor.bundle and TotalTerminal.app?
 > TotalTerminal supersedes Visor. Visor.bundle is a SIMBL plugin which was originally written by Nicholas Jitkoff from [Blacktree](http://blacktree.com). Original Visor was introduced for OS X - Tiger. I have been developing it since Leopard. I decided to rename it to TotalTerminal with OS X Lion release. TotalTerminal has installer, Sparkle updater and does not depend on [SIMBL](http://www.culater.net/software/SIMBL/SIMBL.php). In the future it will get more bug fixes and hopefully some new features.
@@ -180,6 +195,48 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
 
 #### Do I need to install CopyOnSelect SIMBL with TotalTerminal?
 > No, CopyOnSelect is integrated into TotalTerminal 1.0 and later. It is a configurable option in TotalTerminal Preferences (disabled by default).
+
+## SIP
+
+### System Integrity Protection
+
+Under OS X 10.11 (El Capitan), TotalTerminal cannot run on a normally configured machine due to [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection).
+
+System Integrity Protection (SIP) is a new security feature introduced by Apple. That's good, but unfortunately it prevents TotalTerminal from augmenting Finder. This article will tell you how to configure your machine, so that you can use TotalTerminal. Before you do this, it is important to get informed about [what System Integrity Protection is, and what it means to turn it off](https://en.wikipedia.org/wiki/System_Integrity_Protection). Apple also provided [some information here](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/System_Integrity_Protection_Guide/Introduction/Introduction.html).
+
+<div class="license-desk">
+<a href="http://binaryage.com/about">
+<img width="20" height="20" src="http://www.gravatar.com/avatar/79322c2ed80c2d722de8c9d0475198a0?s=40" style="float: left; position: relative; top: 2px; margin-right: 6px; display:block; border: 1px solid #ccc" title="Who is Antonin?">
+</a>
+Do you really depend on TotalTerminal workflows so much that you want to possibly lower your system security?
+Frankly, I'm going to stop TotalTerminal development because I have personally switched it <a href="https://iterm2.com/">iTerm 2</a>. It offers similar functionality to Visor and comparable features to build-in Terminal.app.
+</div>
+
+Anyways, if you decide to modify the setting under El Capitan, you will be able to install and run TotalTerminal as before. Just to be clear...
+
+<div class="license-desk exclamation">
+I'm not encouraging you to turn System Integrity Protection off. Your machine may be less secure with it off. It is entirely your decision.
+</div>
+
+<br>
+
+### How to modify System Integrity Protection
+
+You must boot into the Recovery OS. You do this by restarting your machine, and holding `COMMAND + R` until the Apple logo appears.
+
+Then select Terminal from the Utilities menu. It looks like this:
+
+<img src="/images/recovery-1.png">
+
+In the window that opens, type `csrutil enable --without debug` and press return. 
+
+<img src="/images/recovery-2.png">
+
+This turns off the part of SIP that TotalTerminal needs to run, and OS X complains that it is an unsupported configuration.
+
+Now type `reboot` and press return to restart your machine. After restart you may install the [latest version of TotalTerminal](/#changelog).
+
+You can find some further information [in our blog](http://blog.binaryage.com/el-capitan-update).
 
 ## Changelog
 
