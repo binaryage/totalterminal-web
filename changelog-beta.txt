@@ -1,3 +1,7 @@
+1.6 - September 28, 2015
+  + Compatibility with OS X 10.11 (<a href="http://totalterminal.binaryage.com/#sip">but you have to disable SIP</a>). [El Capitan]
+  - Dropped support for OS X 10.8. [Mountain Lion]
+
 1.5.4 - October 15, 2014
   + It is newly possible to resize active Terminal window using hotkeys CMD+OPT+ARROWS (see the Window menu).
   * Visor sliding is newly implemented via animation groups instead of using an active loop (sliding is smooth even if you press hot-key during animation to reverse it).
