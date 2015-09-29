@@ -78,7 +78,7 @@ oses: [{
       <span><i class="fa fa-download fa-lg"></i>{{page.downloadtitle}}</span>
     </a>
     <div class="button-note">
-      <i class="fa fa-check-circle"></i> Compatible with OS X 10.8, 10.9 and 10.10<br>
+      <i class="fa fa-check-circle"></i> Compatible with OS X 10.9 and 10.10<br>
       <div class="exclamation"><i class="fa fa-exclamation-circle"></i> <a href="/#sip">Not compatible with OS X 10.11</a></div><br>
       <br>
       <a href="#compatibility">Looking for an older version?</a><br>
@@ -206,7 +206,7 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
 
 Under OS X 10.11 (El Capitan), TotalTerminal cannot run on a normally configured machine due to [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection).
 
-System Integrity Protection (SIP) is a new security feature introduced by Apple. That's good, but unfortunately it prevents TotalTerminal from augmenting Finder. This article will tell you how to configure your machine, so that you can use TotalTerminal. Before you do this, it is important to get informed about [what System Integrity Protection is, and what it means to turn it off](https://en.wikipedia.org/wiki/System_Integrity_Protection). Apple also provided [some information here](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/System_Integrity_Protection_Guide/Introduction/Introduction.html).
+System Integrity Protection (SIP) is a new security feature introduced by Apple. That's good, but unfortunately it prevents TotalTerminal from augmenting Terminal. This article will tell you how to configure your machine, so that you can use TotalTerminal. Before you do this, it is important to get informed about [what System Integrity Protection is, and what it means to turn it off](https://en.wikipedia.org/wiki/System_Integrity_Protection). Apple also provided [some information here](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/System_Integrity_Protection_Guide/Introduction/Introduction.html).
 
 <div class="license-desk">
 <a href="http://binaryage.com/about">
