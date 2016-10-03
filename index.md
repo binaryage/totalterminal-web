@@ -230,11 +230,11 @@ You must boot into the Recovery OS. You do this by restarting your machine, and 
 
 Then select Terminal from the Utilities menu. It looks like this:
 
-<img src="/images/recovery-1.png">
+<img src="/shared/img/recovery-utilities-terminal.png">
 
 In the window that opens, type `csrutil enable --without debug` and press return. 
 
-<img src="/images/recovery-2.png">
+<img src="/shared/img/recovery-terminal-csrutil-enable-without-debug.png">
 
 This turns off the part of SIP that TotalTerminal needs to run, and OS X complains that it is an unsupported configuration.
 
