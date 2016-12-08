@@ -210,7 +210,7 @@ System Integrity Protection (SIP) is a new security feature introduced by Apple.
 
 <div class="license-desk">
 <a href="http://binaryage.com/about">
-<img width="20" height="20" src="http://www.gravatar.com/avatar/79322c2ed80c2d722de8c9d0475198a0?s=40" style="float: left; position: relative; top: 2px; margin-right: 6px; display:block; border: 1px solid #ccc" title="Who is Antonin?">
+<img width="20" height="20" src="//www.gravatar.com/avatar/79322c2ed80c2d722de8c9d0475198a0?s=40" style="float: left; position: relative; top: 2px; margin-right: 6px; display:block; border: 1px solid #ccc" title="Who is Antonin?">
 </a>
 Do you really depend on TotalTerminal workflows so much that you want to possibly lower your system security?
 Frankly, I'm going to stop TotalTerminal development because I have personally switched to <a href="https://iterm2.com/">iTerm 2</a>. It offers similar functionality to Visor and comparable features to build-in Terminal.app.
