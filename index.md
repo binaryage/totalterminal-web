@@ -1,5 +1,5 @@
 ---
-layout: product-home
+layout: product
 download: http://downloads.binaryage.com/TotalTerminal-1.6.dmg
 downloadtitle: Download v1.6
 title: TotalTerminal is a system-wide terminal accessible via a hot-key
@@ -7,11 +7,6 @@ product: totalterminal
 product_title: TotalTerminal
 product_subtitle: a system-wide terminal available on a hot-key
 product_icon: /shared/img/icons/totalterminal-256.png
-fbsdk: 1
-plusone: 1
-product-fblike: 1
-product-plusone: 1
-product-tweet: 1
 repo: http://github.com/binaryage/totalterminal
 meta_title: TotalTerminal is a system-wide terminal accessible via a hot-key
 meta_keywords: totalterminal,terminal,osx,simbl,binaryage,productivity,software,visor
@@ -263,4 +258,3 @@ You can find some further information [in our blog](http://blog.binaryage.com/el
     $(window).trigger "changelog-rendered"
     
 </script>
-
