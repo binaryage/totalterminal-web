@@ -15,7 +15,7 @@ meta_image: /shared/img/icons/totalterminal-128.png
 build_tabs: 1
 ogmeta: {
     site_name: "BinaryAge website",
-    description: "TotalTerminal is a system-wide terminal for OS X available on a hot-key",
+    description: "TotalTerminal is a system-wide terminal for macOS available on a hot-key",
     email: "support@binaryage.com",
     type: "product",
     title: "TotalTerminal",
@@ -23,6 +23,12 @@ ogmeta: {
     image: "http://www.binaryage.com/shared/img/icons/totalterminal-256.png"
 }
 oses: [{
+  version: "10.12",
+  label: "Sierra",
+  logo: "logo-el-capitan.png",
+  wiki: "OS_X_Sierra",
+  note: "install <a href=\"#latest\">the latest version</a>, but <a href=\"/#sip\" class=\"red\">needs a system tweak</a>"
+},{
   version: "10.11",
   label: "El Capitan",
   logo: "logo-el-capitan.png",
@@ -73,11 +79,8 @@ oses: [{
       <span><i class="fa fa-download fa-lg"></i>{{page.downloadtitle}}</span>
     </a>
     <div class="button-note">
-      <i class="fa fa-check-circle"></i> Compatible with OS X 10.9 and 10.10<br>
-      <div class="exclamation"><i class="fa fa-exclamation-circle"></i> <a href="/#sip">Not compatible with OS X 10.11</a></div><br>
-      <br>
-      <a href="#compatibility">Looking for an older version?</a><br>
-      <a href="#changelog">What's new?</a><br>
+      <i class="fa fa-check-circle"></i> Compatible with macOS 10.9 and 10.10<br>
+      <div class="exclamation"><i class="fa fa-exclamation-circle"></i> <a href="/#sip">Not compatible with macOS 10.11 and 10.12</a></div><br>
     </div>
   </div>
 </div>
@@ -117,18 +120,16 @@ Then you can trigger Visor Window with your hot-key from any application to get 
 .custom-os-box img { height:32px; float:left; margin-right:12px; }
 .custom-os-box .title { color:#666; font-weight:bold; display:inline-block; width: 220px }
 .custom-os-box .title a { color:#666; }
-.custom-os-box .note { color:#666; display:inline-block }
+.custom-os-box .note { color:#666; display:inline-block; width: 600px; }
 .custom-os-box a {font-weight: bold}
 {% endcontentfor %}
 
 {% for item in page.oses %}
 <div class="custom-os-box">
   <img src="shared/img/os/{{item.logo}}">
-  <div class="title"><a href="http://en.wikipedia.org/wiki/{{item.wiki}}">OS X {{item.version}} ({{item.label}})</a></div><div class="note"> =&gt; {{item.note}}</div>
+  <div class="title"><a href="http://en.wikipedia.org/wiki/{{item.wiki}}">macOS {{item.version}} ({{item.label}})</a></div><div class="note"> =&gt; {{item.note}}</div>
 </div>
 {% endfor %}
-
-For older versions please search the internet for <a href="http://www.blacktree.com">Visor by Blacktree</a>.
 
 ## FAQ
 
@@ -199,7 +200,7 @@ If you have troubles with TotalTerminal settings, delete this file and restart T
 
 ### System Integrity Protection
 
-Under OS X 10.11 (El Capitan), TotalTerminal cannot run on a normally configured machine due to [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection).
+Starting with macOS 10.11 (El Capitan), TotalTerminal cannot run on a normally configured machine due to [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection).
 
 System Integrity Protection (SIP) is a new security feature introduced by Apple. That's good, but unfortunately it prevents TotalTerminal from augmenting Terminal. This article will tell you how to configure your machine, so that you can use TotalTerminal. Before you do this, it is important to get informed about [what System Integrity Protection is, and what it means to turn it off](https://en.wikipedia.org/wiki/System_Integrity_Protection). Technical details are well covered in [SIP review on Ars Technica](http://arstechnica.com/apple/2015/09/os-x-10-11-el-capitan-the-ars-technica-review/8). Apple also provided [some information here](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/System_Integrity_Protection_Guide/Introduction/Introduction.html).
 
@@ -231,7 +232,7 @@ In the window that opens, type `csrutil enable --without debug` and press return
 
 <img src="/shared/img/recovery-terminal-csrutil-enable-without-debug.png">
 
-This turns off the part of SIP that TotalTerminal needs to run, and OS X complains that it is an unsupported configuration.
+This turns off the part of SIP that TotalTerminal needs to run, and macOS complains that it is an unsupported configuration.
 
 Now type `reboot` and press return to restart your machine. After restart you may install the [latest version of TotalTerminal](/#changelog).
 
