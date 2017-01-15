@@ -246,15 +246,15 @@ You can find some further information [in our blog](http://blog.binaryage.com/el
 </div>
 
 <script type="text/coffeescript" charset="utf-8">
-  nonce = -> (Math.random() + "").substring(2)
-  source = "changelog-beta.txt"
-  
-  $.get "#{source}?x=#{nonce()}", (data) ->
-    changelog = parsePlaintextChangelog(data)
+  defer$ ->
+    nonce = -> (Math.random() + "").substring(2)
+    source = "changelog-beta.txt"
 
-    getDownloadLinkForVersion = (version) -> "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
-    getReleaseDateText = (date) -> "released on " + date
-    generateChangelogHTML "#changelog-content", changelog, getDownloadLinkForVersion, getReleaseDateText
-    $(window).trigger "changelog-rendered"
-    
+    $.get "#{source}?x=#{nonce()}", (data) ->
+      changelog = parsePlaintextChangelog(data)
+
+      getDownloadLinkForVersion = (version) -> "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
+      getReleaseDateText = (date) -> "released on " + date
+      generateChangelogHTML "#changelog-content", changelog, getDownloadLinkForVersion, getReleaseDateText
+      $(window).trigger "changelog-rendered"
 </script>
