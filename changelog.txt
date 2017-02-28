@@ -7,12 +7,12 @@
   - Removed support for OS X 10.7 (Lion).
 
 1.4.10 - January 23, 2014
-  + Added new AppleScript commands to <a href="http://discuss.binaryage.com/t/how-to-toggle-visor-window-externally/1286">slide visor programatically</a>.
+  + Added new AppleScript commands to <a href="https://discuss.binaryage.com/t/how-to-toggle-visor-window-externally/1286">slide visor programatically</a>.
   ! Do not show Visor during startup (a regression introduced in 1.4.8)
 
 1.4.8 - January 17, 2014
   + Introduced a new Screen preference option: "Screen with Mouse Cursor" <a href="https://github.com/iammattcoleman/totalterminal/commit/1c711b3522e0f248ac02834f247422483fb37817">by Matt Coleman</a>.
-  ! Sparkle was <a href="http://discuss.binaryage.com/t/the-update-asked-for-my-password-why/838/6">asking randomly for password</a> when installing DMG. This fix will be effective since next update. With this update you might still be asked. Please enter empty string or anything.    
+  ! Sparkle was <a href="https://discuss.binaryage.com/t/the-update-asked-for-my-password-why/838/6">asking randomly for password</a> when installing DMG. This fix will be effective since next update. With this update you might still be asked. Please enter empty string or anything.    
 
 1.4.6 - November 06, 2013
   + Introduced a new preferences checkbox for <a href="https://github.com/binaryage/totalterminal/issues/46">allowing switching between tabs via CMD+&lt;number&gt;</a>. The code was based on <a href="https://github.com/dabeeeenster/terminaltabswitching">this SIMBL project</a>.
@@ -22,21 +22,21 @@
   * <a href="https://github.com/binaryage/totalterminal/issues/87#issuecomment-27569130">Consistent behavior of auto-sliding</a> when one creates a new Visor window via CMD+N or reopening Terminal by clicking the Dock icon.
 
 1.4.5 - November 02, 2013
-  * Implemented new launcher similar to TotalFinder. We should not see <a href="http://discuss.binaryage.com/t/totalterminal-not-loading-on-startup-in-mavericks">AppleScript timeout errors on startup</a> anymore.
+  * Implemented new launcher similar to TotalFinder. We should not see <a href="https://discuss.binaryage.com/t/totalterminal-not-loading-on-startup-in-mavericks">AppleScript timeout errors on startup</a> anymore.
   * When activating Visor other Terminal windows are not brought to front (they do not change Z-level).
-  ! Fixed transferring focus to Visor window when <a href="http://discuss.binaryage.com/t/1-4-4-doesnt-focus-on-visor-when-activated/717">there are other Terminal windows in play</a>.
-  ! Fixed <a href="http://discuss.binaryage.com/t/delay-at-window-opening-since-1-4-x">delay when activating Visor via double-keypress</a>.
+  ! Fixed transferring focus to Visor window when <a href="https://discuss.binaryage.com/t/1-4-4-doesnt-focus-on-visor-when-activated/717">there are other Terminal windows in play</a>.
+  ! Fixed <a href="https://discuss.binaryage.com/t/delay-at-window-opening-since-1-4-x">delay when activating Visor via double-keypress</a>.
 
 1.4.4 - October 28, 2013
   + Added preferences tweak to "Run Terminal.app as a background app". This allows <a href="https://github.com/binaryage/totalterminal/issues/5">Visor sliding over fullscreen apps</a>.
   * Updated status menu icons with retina versions (thanks to <a href="https://github.com/binaryage/totalterminal-i18n/pull/5">Rory Hardy</a>).
-  ! Auto-sliding after CMD+TAB takes place only if the Visor window is the only Terminal window in the system (<a href="http://discuss.binaryage.com/t/two-problems-with-1-4-3">the bug report here</a>).
-  ! Fixed <a href="http://discuss.binaryage.com/t/totalterminal-lost-right-click-paste-after-upgrade-to-v1-4-3">broken "paste on right-click" feature</a>.
+  ! Auto-sliding after CMD+TAB takes place only if the Visor window is the only Terminal window in the system (<a href="https://discuss.binaryage.com/t/two-problems-with-1-4-3">the bug report here</a>).
+  ! Fixed <a href="https://discuss.binaryage.com/t/totalterminal-lost-right-click-paste-after-upgrade-to-v1-4-3">broken "paste on right-click" feature</a>.
 
 1.4.3 - October 25, 2013
   - Removed support for OS X 10.6 Snow Leopard.
   + Compatibility with OS X 10.9 Mavericks.
-  + New custom uninstaller (reused code from <a href="http://totalfinder.binaryage.com">TotalFinder</a>).
+  + New custom uninstaller (reused code from <a href="https://totalfinder.binaryage.com">TotalFinder</a>).
   + Added support for showing Visor via AppleScript.
   + TotalTerminal can switch Terminal.app into <a href="https://github.com/binaryage/totalterminal/issues/3#issuecomment-26988325">UIElement mode</a> dynamically (removes the Dock icon).
   ! Properly unregisters hot keys when closing visor (fixes <a href="https://github.com/binaryage/totalterminal/issues/53">#53</a>)
