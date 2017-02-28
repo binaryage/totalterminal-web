@@ -1,6 +1,6 @@
 ---
 layout: product
-download: http://downloads.binaryage.com/TotalTerminal-1.6.dmg
+download: https://downloads.binaryage.com/TotalTerminal-1.6.dmg
 downloadtitle: Download v1.6
 title: TotalTerminal is a system-wide terminal accessible via a hot-key
 product: totalterminal
@@ -19,8 +19,8 @@ ogmeta: {
     email: "support@binaryage.com",
     type: "product",
     title: "TotalTerminal",
-    url: "http://totalterminal.binaryage.com",
-    image: "http://www.binaryage.com/shared/img/icons/totalterminal-256.png"
+    url: "https://totalterminal.binaryage.com",
+    image: "https://www.binaryage.com/shared/img/icons/totalterminal-256.png"
 }
 oses: [{
   version: "10.12",
@@ -71,7 +71,7 @@ oses: [{
 <div class="product-buttons">
   <div class="button-container">
     <div class="cross-promo">
-      <i class="fa fa-thumbs-o-up fa-lg"></i><div>Do you like TotalTerminal?<br><a href="http://totalfinder.binaryage.com">Check out also TotalFinder</a></div>.
+      <i class="fa fa-thumbs-o-up fa-lg"></i><div>Do you like TotalTerminal?<br><a href="https://totalfinder.binaryage.com">Check out also TotalFinder</a></div>.
     </div>
   </div>
   <div class="button-container">
@@ -236,7 +236,7 @@ This turns off the part of SIP that TotalTerminal needs to run, and macOS compla
 
 Now type `reboot` and press return to restart your machine. After restart you may install the [latest version of TotalTerminal](/#changelog).
 
-You can find some further information [in our blog](http://blog.binaryage.com/el-capitan-update).
+You can find some further information [in our blog](https://blog.binaryage.com/el-capitan-update).
 
 ## Changelog
 
@@ -254,7 +254,7 @@ You can find some further information [in our blog](http://blog.binaryage.com/el
     $.get "#{source}?x=#{nonce()}", (data) ->
       changelog = parsePlaintextChangelog(data)
 
-      getDownloadLinkForVersion = (version) -> "http://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
+      getDownloadLinkForVersion = (version) -> "https://downloads.binaryage.com/TotalTerminal-#{version}.dmg"
       getReleaseDateText = (date) -> "released on " + date
       generateChangelogHTML "#changelog-content", changelog, getDownloadLinkForVersion, getReleaseDateText
       $(window).trigger "changelog-rendered"
