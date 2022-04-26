@@ -5,7 +5,7 @@
     <link rel="canonical" href="https://totalterminal.binaryage.com/"/>
     <link rel="shortcut icon" href="https://static.binaryage.com/5604bda0_favicon.ico" type="image/x-icon"/>
     <link rel="icon" href="https://static.binaryage.com/5604bda0_favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://static.binaryage.com/26f8d85b_shared_css_site.css" type="text/css"/>
+    <link rel="stylesheet" href="https://static.binaryage.com/493de12c_shared_css_site.css" type="text/css"/>
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
     <script>WebFont.load({google:{families:["Play:400,700:latin"]}})</script>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
@@ -24,10 +24,10 @@
     <meta property="og:url" content="https://totalterminal.binaryage.com"/>
     <meta property="og:image" content="https://www.binaryage.com/shared/img/icons/totalterminal-256.png"/>
     <link href="https://feeds.feedburner.com/binaryage-blog" type="application/atom+xml" rel="alternate" title="Ideas from BinaryAge"/>
-    <script>function defer$(e){if(window.jQuery){e()}else{setTimeout(function(){defer$(e)},50)}}</script>
+    <script>function defer$(e){window.jQuery?e():setTimeout(function(){defer$(e)},50)}</script>
     <style>.custom-os-box{margin-left:20px;font-size:14px;clear:both;margin-bottom:20px;line-height:32px}.custom-os-box img{height:32px;float:left;margin-right:12px}.custom-os-box .title{color:#666;font-weight:bold;display:inline-block;width:220px}.custom-os-box .title a{color:#666}.custom-os-box .note{color:#666;display:inline-block;width:600px}.custom-os-box a{font-weight:bold}</style>
   </head>
-  <body id="page-totalterminal-index">
+  <body id="page-totalterminal-index" class="site-totalterminal">
     <div id="header">
       <div class="container">
         <div class="row">
@@ -62,7 +62,6 @@
             </div>
             <div class="relativize">
               <ul class="header-menu menu-selected-products">
-                <li class="menu-item-store"><a href="https://sites.fastspring.com/binaryage/product/store"><i class="fa fa-shopping-cart"></i><span>store</span></a></li>
                 <li class="menu-item-products"><a href="//www.binaryage.com"><i class="fa fa-star"></i><span>products</span></a></li>
                 <li class="menu-item-blog"><a href="//blog.binaryage.com"><i class="fa fa-bullhorn"></i><span>blog</span></a></li>
                 <li class="menu-item-support"><a href="//discuss.binaryage.com"><i class="fa fa-comments"></i><span>support</span></a></li>
@@ -119,27 +118,27 @@
       </div>
       <div id="totalterminal-content" class="product-content" style="display:none">
         <div class="container">
-          <h2>About</h2>
+          <h2 id="about">About</h2>
           <div class="license-desk exclamation" style="display:inline-block">
             Warning: TotalTerminal is no longer under active development
           </div>
-          <h3>TotalTerminal is a plugin for Terminal.app.</h3>
+          <h3 id="totalterminal-is-a-plugin-for-terminalapp">TotalTerminal is a plugin for Terminal.app.</h3>
           <p>It provides persistent Visor Window which slides down when you press a hot-key (remember Quake console?).</p>
           <p><img src="https://static.binaryage.com/a5de11df_shared_img_totalterminal-mainshot-full.png" class="doc-main-image"/></p>
-          <h2>Installation</h2>
-          <h3>TotalTerminal has an installer</h3>
+          <h2 id="installation">Installation</h2>
+          <h3 id="totalterminal-has-an-installer">TotalTerminal has an installer</h3>
           <ol>
             <li>Download <a href="https://downloads.binaryage.com/TotalTerminal-1.6.dmg">latest TotalTerminal.dmg</a> and run the installer.</li>
-            <li>Configure your keyboard trigger by selecting the <code>Preferences... -&gt; TotalTerminal</code> and edit your keyboard hot-key. By default it is <code>CTRL+~</code>.</li>
+            <li>Configure your keyboard trigger by selecting the <code class="language-plaintext highlighter-rouge">Preferences... -&gt; TotalTerminal</code> and edit your keyboard hot-key. By default it is <code class="language-plaintext highlighter-rouge">CTRL+~</code>.</li>
           </ol>
           <p>Then you can trigger Visor Window with your hot-key from any application to get an instant terminal session.</p>
-          <h3>To hide Visor window, you can either:</h3>
+          <h3 id="to-hide-visor-window-you-can-either">To hide Visor window, you can either:</h3>
           <ul>
             <li>re-trigger with your key-combo</li>
             <li>optionally, you can click off the TotalTerminal window</li>
             <li>optionally, you can hit ESC (if enabled in TotalTerminal preferences)</li>
           </ul>
-          <h2>Compatibility</h2>
+          <h2 id="compatibility">Compatibility</h2>
           <div class="custom-os-box">
             <img src="https://static.binaryage.com/54b83946_shared_img_os_logo-el-capitan.png"/>
             <div class="title"><a href="http://en.wikipedia.org/wiki/OS_X_Sierra">macOS 10.12 (Sierra)</a></div><div class="note"> =&gt; install <a href="#latest">the latest version</a>, but <a href="/#sip" class="red">needs a system tweak</a></div>
@@ -168,52 +167,82 @@
             <img src="https://static.binaryage.com/53850cde_shared_img_os_logo-snow-leopard.png"/>
             <div class="title"><a href="http://en.wikipedia.org/wiki/OS_X_Snow_Leopard">macOS 10.6 (Snow Leopard)</a></div><div class="note"> =&gt; install <a href="#1.3">version 1.3</a></div>
           </div>
-          <h2>FAQ</h2>
-          <h4>Does it run under OS X 10.11 (El Capitan)?</h4>
-          <blockquote><p> Not under default configuration. It requires a system tweak, <a href="/#sip">read about it here</a>.</p></blockquote>
-          <h4>How do I uninstall TotalTerminal?</h4>
-          <blockquote><p>You may use Status Menu Icon and select <code>Uninstall TotalTerminal</code>. Alternatively you may <a href="#changelog">download TotalTerminal DMG</a> again and use <code>TotalTerminal Uninstaller</code> which is present there.</p>
+          <h2 id="faq">FAQ</h2>
+          <h4 id="does-it-run-under-os-x-1011-el-capitan">Does it run under OS X 10.11 (El Capitan)?</h4>
+          <blockquote>
+            <p>Not under default configuration. It requires a system tweak, <a href="/#sip">read about it here</a>.</p>
+          </blockquote>
+          <h4 id="how-do-i-uninstall-totalterminal">How do I uninstall TotalTerminal?</h4>
+          <blockquote>
+            <p>You may use Status Menu Icon and select <code class="language-plaintext highlighter-rouge">Uninstall TotalTerminal</code>. Alternatively you may <a href="#changelog">download TotalTerminal DMG</a> again and use <code class="language-plaintext highlighter-rouge">TotalTerminal Uninstaller</code> which is present there.</p>
             <p>Alternatively you can launch this command in Terminal.app:
-          <code>open "/Library/ScriptingAdditions/TotalTerminal.osax/Contents/Resources/TotalTerminal.bundle/Contents/Resources/TotalTerminal Uninstaller.app"</code></p></blockquote>
-          <h4>What is the difference between Visor.bundle and TotalTerminal.app?</h4>
-          <blockquote><p>TotalTerminal supersedes Visor. Visor.bundle is a SIMBL plugin which was originally written by Nicholas Jitkoff from <a href="http://blacktree.com">Blacktree</a>. Original Visor was introduced for OS X - Tiger. I have been developing it since Leopard. I decided to rename it to TotalTerminal with OS X Lion release. TotalTerminal has installer, Sparkle updater and does not depend on <a href="http://www.culater.net/software/SIMBL/SIMBL.php">SIMBL</a>. In the future it will get more bug fixes and hopefully some new features.</p>
-          <p>The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)</p></blockquote>
-          <h4>I see two Terminal.app icons in the Dock. How should I get rid of it?</h4>
-          <blockquote><p>This affects people who pin TotalTerminal.app icon in the Dock as a permanent icon.</p>
+            <code class="language-plaintext highlighter-rouge">open "/Library/ScriptingAdditions/TotalTerminal.osax/Contents/Resources/TotalTerminal.bundle/Contents/Resources/TotalTerminal Uninstaller.app"</code></p>
+          </blockquote>
+          <h4 id="what-is-the-difference-between-visorbundle-and-totalterminalapp">What is the difference between Visor.bundle and TotalTerminal.app?</h4>
+          <blockquote>
+            <p>TotalTerminal supersedes Visor. Visor.bundle is a SIMBL plugin which was originally written by Nicholas Jitkoff from <a href="http://blacktree.com">Blacktree</a>. Original Visor was introduced for OS X - Tiger. I have been developing it since Leopard. I decided to rename it to TotalTerminal with OS X Lion release. TotalTerminal has installer, Sparkle updater and does not depend on <a href="http://www.culater.net/software/SIMBL/SIMBL.php">SIMBL</a>. In the future it will get more bug fixes and hopefully some new features.</p>
+            <p>The main technical difference is that TotalTerminal is not launched automatically. You have to launch TotalTerminal.app to inject plugin into Terminal.app (if it is not running the launcher will launch it)</p>
+          </blockquote>
+          <h4 id="i-see-two-terminalapp-icons-in-the-dock-how-should-i-get-rid-of-it">I see two Terminal.app icons in the Dock. How should I get rid of it?</h4>
+          <blockquote>
+            <p>This affects people who pin TotalTerminal.app icon in the Dock as a permanent icon.</p>
             <p>When you click TotalTerminal.app icon in the Dock, the system launches TotalTerminal.app. But <a href="https://github.com/binaryage/totalterminal-installer/tree/master/TotalTerminal.app">TotalTerminal.app is just a lightweight launcher</a> which:</p>
             <ol>
               <li>launches Terminal.app (if it is not running)</li>
               <li>injects TotalTerminal plugin into it.</li>
               <li>quits</li>
             </ol>
-          <p>You end up with two Terminal icons in the Dock: one for running Terminal.app and second for pinned TotalTerminal.app (which is not running anymore after injecting the plugin).</p></blockquote>
-          <h4>How to remove Terminal from App Switcher (CMD+TAB)?</h4>
-          <blockquote><p>Please follow <a href="https://github.com/binaryage/totalterminal/issues/3">this thread</a> to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app's Info.plist - this would break code signature from Apple.</p></blockquote>
-          <h4>Where are TotalTerminal settings stored?</h4>
-          <blockquote><p>TotalTerminal settings are stored with Terminal.app settings. You can <code>open ~/Library/Preferences/com.apple.Terminal.plist</code> and tweak the values (better to do this when Terminal.app is not running).
-          If you have troubles with TotalTerminal settings, delete this file and restart Terminal.app. The file will be recreated with default values.</p></blockquote>
-          <h4>How can I open a new terminal window the old way, as a classic OSX window?</h4>
-          <blockquote><p>If there is a Visor Window (the status menu icon is active) every new terminal window will be opened as a classic OS X window. In other words, open at least two terminal windows. The second one will be a classic terminal window for sure.</p></blockquote>
-          <h4>How can I change the height of Visor?</h4>
-          <blockquote><p>Go to Terminal.app's Preferences -> Window -> Rows</p></blockquote>
-          <h4>How can I stick Visor to left screen edge?</h4>
-          <blockquote><p>Look for the "Position" option in TotalTerminal Preferences and pick "Left-Stretch" window placement.</p></blockquote>
-          <h4>How can I change the width of Visor?</h4>
-          <blockquote><p>By default Visor Window stretches to the full screen width. Set some non-stretching positioning for Visor Window in TotalTerminal Preferences, then Go to Terminal.app's Preferences -> Window -> Columns.</p></blockquote>
-          <h4>Is it possible to show Visor only on a secondary monitor?</h4>
-          <blockquote><p>Go to TotalTerminal Preferences -> Screen</p></blockquote>
-          <h4>Is it possible to see Visor on every Space?</h4>
-          <blockquote><p>TotalTerminal forces Visor window to be visible on every space. You may disable this in TotalTerminal Preferences. Note: Spaces configuration for Terminal.app doesn't apply to the Visor Window, it is effective only for other (classic) terminal windows.</p></blockquote>
-          <h4>I want to keep different preferences for Visor and other (classic) terminal windows. What is the best way manage this?</h4>
-          <blockquote><p>There may be a profile in Terminal.app called "Visor". Visor Window attempts to use the "Visor" profile when opening new tabs in Visor Window (regardless of "default profile" or "startup profile" settings in Terminal.app). In case "Visor" profile is not present, it uses currently selected default profile.</p></blockquote>
-          <h4>Do I need to install TerminalColours SIMBL with TotalTerminal?</h4>
-          <blockquote><p>No, TerminalColours is integrated into TotalTerminal 1.0 and later. Actually it conflicts with TotalTerminal if installed as SIMBL plugin.</p></blockquote>
-          <h4>Do I need to install CopyOnSelect SIMBL with TotalTerminal?</h4>
-          <blockquote><p>No, CopyOnSelect is integrated into TotalTerminal 1.0 and later. It is a configurable option in TotalTerminal Preferences (disabled by default).</p></blockquote>
-          <h2>SIP</h2>
-          <h3>System Integrity Protection</h3>
+            <p>You end up with two Terminal icons in the Dock: one for running Terminal.app and second for pinned TotalTerminal.app (which is not running anymore after injecting the plugin).</p>
+          </blockquote>
+          <h4 id="how-to-remove-terminal-from-app-switcher-cmdtab">How to remove Terminal from App Switcher (CMD+TAB)?</h4>
+          <blockquote>
+            <p>Please follow <a href="https://github.com/binaryage/totalterminal/issues/3">this thread</a> to set special flag from command line. Under Mavericks you cannot easily modify Terminal.app’s Info.plist - this would break code signature from Apple.</p>
+          </blockquote>
+          <h4 id="where-are-totalterminal-settings-stored">Where are TotalTerminal settings stored?</h4>
+          <blockquote>
+            <p>TotalTerminal settings are stored with Terminal.app settings. You can <code class="language-plaintext highlighter-rouge">open ~/Library/Preferences/com.apple.Terminal.plist</code> and tweak the values (better to do this when Terminal.app is not running).
+            If you have troubles with TotalTerminal settings, delete this file and restart Terminal.app. The file will be recreated with default values.</p>
+          </blockquote>
+          <h4 id="how-can-i-open-a-new-terminal-window-the-old-way-as-a-classic-osx-window">How can I open a new terminal window the old way, as a classic OSX window?</h4>
+          <blockquote>
+            <p>If there is a Visor Window (the status menu icon is active) every new terminal window will be opened as a classic OS X window. In other words, open at least two terminal windows. The second one will be a classic terminal window for sure.</p>
+          </blockquote>
+          <h4 id="how-can-i-change-the-height-of-visor">How can I change the height of Visor?</h4>
+          <blockquote>
+            <p>Go to Terminal.app’s Preferences -&gt; Window -&gt; Rows</p>
+          </blockquote>
+          <h4 id="how-can-i-stick-visor-to-left-screen-edge">How can I stick Visor to left screen edge?</h4>
+          <blockquote>
+            <p>Look for the “Position” option in TotalTerminal Preferences and pick “Left-Stretch” window placement.</p>
+          </blockquote>
+          <h4 id="how-can-i-change-the-width-of-visor">How can I change the width of Visor?</h4>
+          <blockquote>
+            <p>By default Visor Window stretches to the full screen width. Set some non-stretching positioning for Visor Window in TotalTerminal Preferences, then Go to Terminal.app’s Preferences -&gt; Window -&gt; Columns.</p>
+          </blockquote>
+          <h4 id="is-it-possible-to-show-visor-only-on-a-secondary-monitor">Is it possible to show Visor only on a secondary monitor?</h4>
+          <blockquote>
+            <p>Go to TotalTerminal Preferences -&gt; Screen</p>
+          </blockquote>
+          <h4 id="is-it-possible-to-see-visor-on-every-space">Is it possible to see Visor on every Space?</h4>
+          <blockquote>
+            <p>TotalTerminal forces Visor window to be visible on every space. You may disable this in TotalTerminal Preferences. Note: Spaces configuration for Terminal.app doesn’t apply to the Visor Window, it is effective only for other (classic) terminal windows.</p>
+          </blockquote>
+          <h4 id="i-want-to-keep-different-preferences-for-visor-and-other-classic-terminal-windows-what-is-the-best-way-manage-this">I want to keep different preferences for Visor and other (classic) terminal windows. What is the best way manage this?</h4>
+          <blockquote>
+            <p>There may be a profile in Terminal.app called “Visor”. Visor Window attempts to use the “Visor” profile when opening new tabs in Visor Window (regardless of “default profile” or “startup profile” settings in Terminal.app). In case “Visor” profile is not present, it uses currently selected default profile.</p>
+          </blockquote>
+          <h4 id="do-i-need-to-install-terminalcolours-simbl-with-totalterminal">Do I need to install TerminalColours SIMBL with TotalTerminal?</h4>
+          <blockquote>
+            <p>No, TerminalColours is integrated into TotalTerminal 1.0 and later. Actually it conflicts with TotalTerminal if installed as SIMBL plugin.</p>
+          </blockquote>
+          <h4 id="do-i-need-to-install-copyonselect-simbl-with-totalterminal">Do I need to install CopyOnSelect SIMBL with TotalTerminal?</h4>
+          <blockquote>
+            <p>No, CopyOnSelect is integrated into TotalTerminal 1.0 and later. It is a configurable option in TotalTerminal Preferences (disabled by default).</p>
+          </blockquote>
+          <h2 id="sip">SIP</h2>
+          <h3 id="system-integrity-protection">System Integrity Protection</h3>
           <p>Starting with macOS 10.11 (El Capitan), TotalTerminal cannot run on a normally configured machine due to <a href="https://en.wikipedia.org/wiki/System_Integrity_Protection">System Integrity Protection</a>.</p>
-          <p>System Integrity Protection (SIP) is a new security feature introduced by Apple. That's good, but unfortunately it prevents TotalTerminal from augmenting Terminal. This article will tell you how to configure your machine, so that you can use TotalTerminal. Before you do this, it is important to get informed about <a href="https://en.wikipedia.org/wiki/System_Integrity_Protection">what System Integrity Protection is, and what it means to turn it off</a>. Technical details are well covered in <a href="http://arstechnica.com/apple/2015/09/os-x-10-11-el-capitan-the-ars-technica-review/8">SIP review on Ars Technica</a>. Apple also provided <a href="https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/System_Integrity_Protection_Guide/Introduction/Introduction.html">some information here</a>.</p>
+          <p>System Integrity Protection (SIP) is a new security feature introduced by Apple. That’s good, but unfortunately it prevents TotalTerminal from augmenting Terminal. This article will tell you how to configure your machine, so that you can use TotalTerminal. Before you do this, it is important to get informed about <a href="https://en.wikipedia.org/wiki/System_Integrity_Protection">what System Integrity Protection is, and what it means to turn it off</a>. Technical details are well covered in <a href="http://arstechnica.com/apple/2015/09/os-x-10-11-el-capitan-the-ars-technica-review/8">SIP review on Ars Technica</a>. Apple also provided <a href="https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/System_Integrity_Protection_Guide/Introduction/Introduction.html">some information here</a>.</p>
           <div class="license-desk">
             <a href="http://binaryage.com/about">
               <img width="20" height="20" src="//www.gravatar.com/avatar/79322c2ed80c2d722de8c9d0475198a0?s=40" style="float: left; position: relative; top: 2px; margin-right: 6px; display:block; border: 1px solid #ccc" title="Who is Antonin?"/>
@@ -221,26 +250,26 @@
             Do you really depend on TotalTerminal workflows so much that you want to possibly lower your system security?
             Frankly, I'm going to stop TotalTerminal development because I have personally switched to <a href="https://iterm2.com/">iTerm 2</a>. It offers similar functionality to Visor and comparable features to build-in Terminal.app.
           </div>
-          <p>Anyways, if you decide to modify the setting under El Capitan, you will be able to install and run TotalTerminal as before. Just to be clear...</p>
+          <p>Anyways, if you decide to modify the setting under El Capitan, you will be able to install and run TotalTerminal as before. Just to be clear…</p>
           <div class="license-desk exclamation">
             I'm not encouraging you to turn System Integrity Protection off. Your machine may be less secure with it off. It is entirely your decision.
           </div>
           <p><br/></p>
-          <h3>How to modify System Integrity Protection</h3>
-          <p>You must boot into the Recovery OS. You do this by restarting your machine, and holding <code>COMMAND + R</code> until the Apple logo appears.</p>
+          <h3 id="how-to-modify-system-integrity-protection">How to modify System Integrity Protection</h3>
+          <p>You must boot into the Recovery OS. You do this by restarting your machine, and holding <code class="language-plaintext highlighter-rouge">COMMAND + R</code> until the Apple logo appears.</p>
           <p>Then select Terminal from the Utilities menu. It looks like this:</p>
           <p><img src="https://static.binaryage.com/bdee89c2_shared_img_recovery-utilities-terminal.png"/></p>
-          <p>In the window that opens, type <code>csrutil enable --without debug</code> and press return.</p>
+          <p>In the window that opens, type <code class="language-plaintext highlighter-rouge">csrutil enable --without debug</code> and press return.</p>
           <p><img src="https://static.binaryage.com/a96af7ca_shared_img_recovery-terminal-csrutil-enable-without-debug.png"/></p>
           <p>This turns off the part of SIP that TotalTerminal needs to run, and macOS complains that it is an unsupported configuration.</p>
-          <p>Now type <code>reboot</code> and press return to restart your machine. After restart you may install the <a href="/#changelog">latest version of TotalTerminal</a>.</p>
+          <p>Now type <code class="language-plaintext highlighter-rouge">reboot</code> and press return to restart your machine. After restart you may install the <a href="/#changelog">latest version of TotalTerminal</a>.</p>
           <p>You can find some further information <a href="https://blog.binaryage.com/el-capitan-update">in our blog</a>.</p>
-          <h2>Changelog</h2>
-          <script src="https://static.binaryage.com/5a951547_shared_js_changelog.js" type="text/javascript" charset="utf-8"></script>
+          <h2 id="changelog">Changelog</h2>
+          <script src="https://static.binaryage.com/9ad4e809_shared_js_changelog.js" type="text/javascript" charset="utf-8"></script>
           <div class="changelogx">
             <div id="changelog-content" class="changelog"></div>
           </div>
-          <script type="text/javascript" charset="utf-8">(function(){defer$(function(){var n,e;n=function(){return(Math.random()+"").substring(2)};e="changelog-beta.txt";return $.get(e+"?x="+n(),function(n){var e,t,r;e=parsePlaintextChangelog(n);t=function(n){return"https://downloads.binaryage.com/TotalTerminal-"+n+".dmg"};r=function(n){return"released on "+n};generateChangelogHTML("#changelog-content",e,t,r);return $(window).trigger("changelog-rendered")})})}).call(this)</script>
+          <script type="text/javascript" charset="utf-8">(function(){defer$(function(){var n,e;return n=function(){return(Math.random()+"").substring(2)},e="changelog-beta.txt",$.get(e+"?x="+n(),function(n){var e;return e=parsePlaintextChangelog(n),generateChangelogHTML("#changelog-content",e,function(n){return"https://downloads.binaryage.com/TotalTerminal-"+n+".dmg"},function(n){return"released on "+n}),$(window).trigger("changelog-rendered")})})}).call(this)</script>
         </div>
       </div>
     </div>
@@ -262,9 +291,9 @@
         </div>
       </div>
     </div>
-    <script src="https://static.binaryage.com/0518c6ed_shared_js_code.js"></script>
-    <script type="text/javascript">window["ga"]=function(){}</script>
-    <script>window["ga"]=undefined;(function(e,n,a,t,i,o,r){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;o=n.createElement(a),r=n.getElementsByTagName(a)[0];o.async=1;o.src=t;r.parentNode.insertBefore(o,r)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-8404259-1","auto",{allowLinker:true});ga("send","pageview");ga("require","linker");ga("linker:autoLink",["fastspring.com"],true)</script>
-    <script type="text/javascript" charset="utf-8">defer$(function(){$(function(){setTimeout(function(){var i=location.hash.substring(1);if(i.substring(0,2)=="o-"){$("#"+i).trigger("click")}},500)})})</script>
+    <script src="https://static.binaryage.com/bb6250cd_shared_js_code.js"></script>
+    <script type="text/javascript">window.ga=function(){}</script>
+    <script>window.ga=undefined,function(e,n,a,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=n.createElement(a),c=n.getElementsByTagName(a)[0],o.async=1,o.src=t,c.parentNode.insertBefore(o,c)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-8404259-1","auto",{allowLinker:!0}),ga("send","pageview"),ga("require","linker"),ga("linker:autoLink",["fastspring.com"],!0)</script>
+    <script type="text/javascript" charset="utf-8">defer$(function(){$(function(){setTimeout(function(){var i=location.hash.substring(1);"o-"==i.substring(0,2)&&$("#"+i).trigger("click")},500)})})</script>
   </body>
 </html>
